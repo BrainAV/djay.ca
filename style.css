@@ -111,8 +111,8 @@ h2 {
     margin-bottom: 2rem;
 }
 
-/* Features Section */
-#features .feature-grid {
+/* Products Section */
+#products .feature-grid {
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
     gap: 2rem;
@@ -120,14 +120,14 @@ h2 {
     margin: 0 auto;
 }
 
-#features .feature-item {
+#products .feature-item {
     background-color: #1a1a1a;
     padding: 2rem;
     border-radius: 8px;
     text-align: center;
 }
 
-#features .feature-item h3 {
+#products .feature-item h3 {
     margin-top: 0;
     color: #1e90ff;
 }
