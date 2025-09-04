@@ -564,7 +564,10 @@
     </main>
 
     <footer>
-        <p>&copy; 2024 DJAY.ca. All Rights Reserved.</p>
+        <p>&copy; <span id="year"></span> DJAY.ca. All Rights Reserved.</p>
+        <script>
+          document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
         <p>Makers of DJ MixKit.</p>
     </footer>
 
