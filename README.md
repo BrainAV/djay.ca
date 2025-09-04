@@ -23,10 +23,10 @@ Welcome to DJAY.ca - where we build creative and accessible audio tools for musi
 Two independent decks with professional-grade controls for seamless track mixing and live performance.
 
 ### ⚡ **Advanced Controls**
-Tempo control, sync, key lock, pitch bend, and more. All the tools professionals need.
+Tempo control, key lock, and more. All the basic tools professionals need.
 
 ### 🎛️ **Effects & Mixer**
-Professional crossfader, 3-band EQ, and real-time effects to shape your unique sound.
+Professional crossfader and Stereo VU Meter level display.
 
 ### 🌐 **No Installation**
 Runs entirely in your browser. Works offline. No downloads, no setup, no hassle.
