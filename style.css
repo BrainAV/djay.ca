@@ -444,6 +444,17 @@ footer {
     margin-top: 4rem;
     backdrop-filter: blur(10px);
 }
+footer a {
+    color: #4ecdc4;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    margin: 0 0.5rem;
+}
+
+footer a:hover {
+    color: #ffffff;
+    text-shadow: 0 0 5px rgba(78, 205, 196, 0.8);
+}
 
 /* Responsive Design */
 @media (max-width: 768px) {
