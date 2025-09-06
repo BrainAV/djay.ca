@@ -41,7 +41,7 @@ body {
     100% { transform: translateY(-100vh) translateX(100px) rotate(360deg); opacity: 0; }
 }
 
-/* Header */
+/**/
  /* Header */
         header {
             background: rgba(0, 0, 0, 0.8);
