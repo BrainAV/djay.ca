@@ -163,3 +163,34 @@ footer {
     padding: 2rem;
     margin-top: 2rem;
 }
+
+/* Content Pages */
+.content-page {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 4rem 2rem;
+    text-align: left;
+}
+
+.content-page h2 {
+    text-align: center;
+    margin-bottom: 2rem;
+}
+
+.content-page p {
+    margin-bottom: 1rem;
+}
+
+.content-page a {
+    color: #1e90ff;
+    text-decoration: none;
+}
+
+.content-page a:hover {
+    text-decoration: underline;
+}
+
+.content-page ul {
+    padding-left: 20px;
+    margin-bottom: 1rem;
+}
