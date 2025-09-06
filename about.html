@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="About DJAY.ca - a creative studio designing innovative audio software.">
+    <title>About Us | DJAY.ca</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DJAY.ca</a></div>
+            <ul>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main class="content-page">
+        <section id="about">
+            <h2>About DJAY.ca</h2>
+            <p>DJAY.ca was founded by Jason Brain, a Canadian DJ with 30 years of experience behind the decks. With a day job in computer programming and project management, Jason combined his passions to create a new generation of audio tools for fellow music lovers.</p>
+            <p>The mission is to build powerful, accessible, and fun software for musicians, DJs, and producers. We believe that high-quality tools should be available to everyone, which is why we focus on browser-based applications that work on any device. We are just getting started and are excited to see what you create.</p>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> DJAY.ca. All Rights Reserved.</p>
+        <script>
+            document.getElementById('year').textContent = new Date().getFullYear();
+        </script>
+        <p>
+            <a href="about.html">About Us</a> | 
+            <a href="contact.html">Contact Us</a> | 
+            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="terms.html">Terms of Service</a>
+        </p>
+    </footer>
+</body>
+</html>
