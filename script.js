@@ -39,7 +39,55 @@ function createBatchParticles() {
   }
 }
 
-// Initialize particles when page loads
+// Enhanced header transparency on scroll + scroll to top button
+let lastScrollY = window.scrollY;
+let ticking = false;
+
+function updateHeader() {
+  const header = document.querySelector("header");
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+  
+  if (header) {
+    const scrollY = window.scrollY;
+
+    if (scrollY > 100) {
+      header.style.background = "rgba(0, 0, 0, 0.95)";
+      header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
+    } else {
+      header.style.background = "rgba(0, 0, 0, 0.8)";
+      header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
+    }
+
+    // Add slight shadow when scrolled
+    if (scrollY > 50) {
+      header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
+    } else {
+      header.style.boxShadow = "none";
+    }
+
+    lastScrollY = scrollY;
+  }
+
+  // Show/hide scroll to top button
+  if (scrollToTopBtn) {
+    if (window.scrollY > 300) {
+      scrollToTopBtn.classList.add("visible");
+    } else {
+      scrollToTopBtn.classList.remove("visible");
+    }
+  }
+
+  ticking = false;
+}
+
+window.addEventListener("scroll", () => {
+  if (!ticking) {
+    requestAnimationFrame(updateHeader);
+    ticking = true;
+  }
+});
+
+// Initialize everything when page loads
 document.addEventListener("DOMContentLoaded", () => {
   // Create initial batch for sub-pages
   createBatchParticles();
@@ -50,6 +98,25 @@ document.addEventListener("DOMContentLoaded", () => {
     document.getElementById("bgAnimation");
   if (bgElement) {
     setInterval(createParticle, 500);
+  }
+
+  // Scroll to top functionality
+  const scrollToTopBtn = document.getElementById("scrollToTop");
+  if (scrollToTopBtn) {
+    scrollToTopBtn.addEventListener("click", () => {
+      // Add a subtle click animation
+      scrollToTopBtn.style.transform = "translateY(-1px) scale(1.05)";
+      
+      window.scrollTo({
+        top: 0,
+        behavior: "smooth"
+      });
+      
+      // Reset button animation after a short delay
+      setTimeout(() => {
+        scrollToTopBtn.style.transform = "";
+      }, 150);
+    });
   }
 
   // Smooth scrolling for anchor links
@@ -142,46 +209,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Reset after 5 seconds if form is still on page (in case of errors)
     setTimeout(resetFormState, 5000);
   }
-});
 
-// Enhanced header transparency on scroll
-let lastScrollY = window.scrollY;
-let ticking = false;
-
-function updateHeader() {
-  const header = document.querySelector("header");
-  if (header) {
-    const scrollY = window.scrollY;
-
-    if (scrollY > 100) {
-      header.style.background = "rgba(0, 0, 0, 0.95)";
-      header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.2)";
-    } else {
-      header.style.background = "rgba(0, 0, 0, 0.8)";
-      header.style.borderBottom = "1px solid rgba(255, 255, 255, 0.1)";
-    }
-
-    // Add slight shadow when scrolled
-    if (scrollY > 50) {
-      header.style.boxShadow = "0 2px 20px rgba(0, 0, 0, 0.3)";
-    } else {
-      header.style.boxShadow = "none";
-    }
-
-    lastScrollY = scrollY;
-  }
-  ticking = false;
-}
-
-window.addEventListener("scroll", () => {
-  if (!ticking) {
-    requestAnimationFrame(updateHeader);
-    ticking = true;
-  }
-});
-
-// Add loading states and micro-interactions
-document.addEventListener("DOMContentLoaded", () => {
   // Add hover effects to feature items
   document
     .querySelectorAll(".feature-item, .instruction-item")
