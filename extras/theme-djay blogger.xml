@@ -5,6 +5,14 @@
     <meta charset='utf-8'/>
     <meta content='width=device-width,initial-scale=1,minimum-scale=1,maximum-scale=1' name='viewport'/>
     <title><data:view.title.escaped/></title>
+        <!-- Template Metadata -->
+    <b:template-skin>
+        <b:variable default='DJAY.ca Professional DJ Template' name='templateName' type='string'/>
+        <b:variable default='A modern, animated template for DJ and music services with gradient design and smooth animations' name='templateDescription' type='string'/>
+        <b:variable default='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOonLiSpOEiJ1MeP0wfQZiCrH7ugiqe2zJ2l0kW4qdz4djt7HJDbaL5S1ZumpFy25X1eLY7ixYlhZclFvF7FC1RX8ieB1S3FmVjfHvATpus1GH6L5og2clOdhojWCxUJkU4vwN5bdTH72FFC4unbj4Mh0DfUh6wJUL4bqitfvkGlK6NyEMh-GpAcF_BIEL/s1600/capture.jpg' name='templateThumbnail' type='string'/>
+        <b:variable default='1.0.0' name='templateVersion' type='string'/>
+        <b:variable default='DJAY.ca' name='templateAuthor' type='string'/>
+    </b:template-skin>
     <b:skin><![CDATA[
         /* Reset and Base Styles */
         * {
