@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Book professional DJs or discover our recommended talent through DJAY.ca's curated network of experienced performers.">
+    <meta name="keywords" content="DJ booking, hire DJ, professional DJs, event entertainment, wedding DJ, party DJ">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T93274MPPZ');
+    </script>
+    <title>Professional DJ Booking | DJAY.ca</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+            background: linear-gradient(135deg, #0a0a0a 0%, #1a0a2e 50%, #16213e 100%);
+            color: #ffffff;
+            line-height: 1.6;
+            overflow-x: hidden;
+        }
+
+        /* Animated background particles */
+        .bg-animation {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: -1;
+            overflow: hidden;
+        }
+
+        .particle {
+            position: absolute;
+            width: 2px;
+            height: 2px;
+            background: linear-gradient(45deg, #ff6b6b, #4ecdc4, #45b7d1, #96ceb4);
+            border-radius: 50%;
+            animation: float 20s infinite linear;
+            opacity: 0.6;
+        }
+
+        @keyframes float {
+            0% {
+                transform: translateY(100vh) translateX(0px) rotate(0deg);
+                opacity: 0;
+            }
+
+            10% {
+                opacity: 1;
+            }
+
+            90% {
+                opacity: 1;
+            }
+
+            100% {
+                transform: translateY(-100vh) translateX(100px) rotate(360deg);
+                opacity: 0;
+            }
+        }
+
+        /* Header */
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            backdrop-filter: blur(20px);
+            border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+            position: sticky;
+            top: 0;
+            z-index: 1000;
+            padding: 1rem 2rem;
+        }
+
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            max-width: 1400px;
+            margin: 0 auto;
+        }
+
+        .logo {
+            font-size: 1.8rem;
+            font-weight: 800;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-decoration: none;
+        }
+
+        nav ul {
+            list-style: none;
+            display: flex;
+            align-items: center;
+            gap: 2rem;
+        }
+
+        nav ul li a {
+            color: #ffffff;
+            text-decoration: none;
+            font-weight: 500;
+            transition: all 0.3s ease;
+            padding: 0.5rem 1rem;
+            border-radius: 8px;
+        }
+
+        nav ul li a:hover {
+            background: rgba(255, 255, 255, 0.1);
+            transform: translateY(-2px);
+        }
+
+        /* Main Content */
+        main {
+            max-width: 1400px;
+            margin: 0 auto;
+            padding: 0 2rem;
+        }
+
+        /* Hero Section */
+        .hero {
+            text-align: center;
+            padding: 6rem 0 4rem 0;
+            position: relative;
+        }
+
+        .hero::before {
+            content: '';
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            width: 600px;
+            height: 600px;
+            background: radial-gradient(circle, rgba(255, 107, 107, 0.1) 0%, rgba(78, 205, 196, 0.1) 50%, transparent 70%);
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            z-index: -1;
+            animation: pulse 8s infinite ease-in-out;
+        }
+
+        @keyframes pulse {
+
+            0%,
+            100% {
+                transform: translate(-50%, -50%) scale(1);
+                opacity: 0.5;
+            }
+
+            50% {
+                transform: translate(-50%, -50%) scale(1.2);
+                opacity: 0.8;
+            }
+        }
+
+        .hero h1 {
+            font-size: 3.5rem;
+            font-weight: 900;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ffffff, #4ecdc4, #ff6b6b);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            line-height: 1.1;
+        }
+
+        .hero p {
+            font-size: 1.3rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            max-width: 700px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        /* Booking Options */
+        .booking-options {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+            gap: 3rem;
+            margin: 4rem 0 6rem 0;
+        }
+
+        .booking-card {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+            border-radius: 20px;
+            padding: 3rem 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            transition: all 0.3s ease;
+            text-align: center;
+        }
+
+        .booking-card::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 3s infinite;
+        }
+
+        @keyframes shimmer {
+            0% {
+                transform: translateX(-100%) translateY(-100%) rotate(45deg);
+            }
+
+            100% {
+                transform: translateX(100%) translateY(100%) rotate(45deg);
+            }
+        }
+
+        .booking-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+        }
+
+        .booking-card h2 {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            position: relative;
+            z-index: 1;
+        }
+
+        .booking-card p {
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            font-size: 1.1rem;
+            position: relative;
+            z-index: 1;
+        }
+
+        .cta-button {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: #ffffff;
+            padding: 14px 32px;
+            border-radius: 50px;
+            text-decoration: none;
+            font-weight: 700;
+            font-size: 1.1rem;
+            transition: all 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
+            position: relative;
+            overflow: hidden;
+            border: 2px solid transparent;
+            background-clip: padding-box;
+            display: inline-block;
+            z-index: 1;
+        }
+
+        .cta-button:hover {
+            transform: translateY(-3px) scale(1.05);
+            box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5), 0 0 30px rgba(78, 205, 196, 0.3);
+        }
+
+        /* Featured DJ Section */
+        .featured-dj {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(78, 205, 196, 0.05));
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dj-profile {
+            display: grid;
+            grid-template-columns: 1fr 2fr;
+            gap: 3rem;
+            align-items: center;
+        }
+
+        .dj-image {
+            width: 300px;
+            height: 300px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 4rem;
+            margin: 0 auto;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dj-image::before {
+            content: '';
+            position: absolute;
+            inset: 3px;
+            background: linear-gradient(135deg, #1a0a2e, #16213e);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .dj-image span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .dj-info h3 {
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .dj-specialties {
+            display: flex;
+            flex-wrap: wrap;
+            gap: 0.5rem;
+            margin: 1.5rem 0;
+        }
+
+        .specialty-tag {
+            background: rgba(78, 205, 196, 0.2);
+            color: #4ecdc4;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            border: 1px solid rgba(78, 205, 196, 0.3);
+        }
+
+        /* Recommended DJs Grid */
+        .recommended-section {
+            padding: 4rem 0;
+        }
+
+        .section-title {
+            text-align: center;
+            font-size: 2.5rem;
+            margin-bottom: 3rem;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .djs-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+            gap: 2rem;
+            margin-top: 2rem;
+        }
+
+        .dj-card {
+            background: linear-gradient(135deg, rgba(255, 255, 255, 0.05), rgba(255, 255, 255, 0.02));
+            border-radius: 16px;
+            padding: 2rem;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            transition: all 0.3s ease;
+            text-align: center;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dj-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            right: 0;
+            height: 3px;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            transform: scaleX(0);
+            transition: transform 0.3s ease;
+        }
+
+        .dj-card:hover::before {
+            transform: scaleX(1);
+        }
+
+        .dj-card:hover {
+            transform: translateY(-8px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
+        }
+
+        .dj-avatar {
+            width: 120px;
+            height: 120px;
+            border-radius: 50%;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 2rem;
+            margin: 0 auto 1rem;
+            position: relative;
+            overflow: hidden;
+        }
+
+        .dj-avatar::before {
+            content: '';
+            position: absolute;
+            inset: 2px;
+            background: linear-gradient(135deg, #1a0a2e, #16213e);
+            border-radius: 50%;
+        }
+
+        .dj-avatar span {
+            position: relative;
+            z-index: 1;
+        }
+
+        .dj-card h4 {
+            color: #4ecdc4;
+            margin-bottom: 0.5rem;
+            font-size: 1.3rem;
+        }
+
+        .dj-card .location {
+            opacity: 0.7;
+            margin-bottom: 1rem;
+            font-size: 0.9rem;
+        }
+
+        .dj-card .genres {
+            font-size: 0.85rem;
+            opacity: 0.8;
+            margin-bottom: 1.5rem;
+        }
+
+        .visit-button {
+            background: transparent;
+            color: #4ecdc4;
+            padding: 0.6rem 1.5rem;
+            border: 2px solid #4ecdc4;
+            border-radius: 25px;
+            text-decoration: none;
+            font-weight: 600;
+            font-size: 0.9rem;
+            transition: all 0.3s ease;
+        }
+
+        .visit-button:hover {
+            background: #4ecdc4;
+            color: #1a0a2e;
+            transform: translateY(-2px);
+        }
+
+        /* Footer */
+        footer {
+            background: linear-gradient(135deg, rgba(0, 0, 0, 0.8), rgba(26, 10, 46, 0.8));
+            border-top: 1px solid rgba(255, 255, 255, 0.1);
+            text-align: center;
+            padding: 3rem 2rem;
+            margin-top: 4rem;
+            backdrop-filter: blur(10px);
+        }
+
+        footer a {
+            color: #4ecdc4;
+            text-decoration: none;
+            transition: all 0.3s ease;
+            margin: 0 0.5rem;
+        }
+
+        footer a:hover {
+            color: #ffffff;
+            text-shadow: 0 0 5px rgba(78, 205, 196, 0.8);
+        }
+
+        /* Responsive Design */
+        @media (max-width: 768px) {
+            .hero h1 {
+                font-size: 2.8rem;
+            }
+
+            .booking-options {
+                grid-template-columns: 1fr;
+            }
+
+            .dj-profile {
+                grid-template-columns: 1fr;
+                text-align: center;
+            }
+
+            .dj-image {
+                width: 200px;
+                height: 200px;
+                font-size: 3rem;
+            }
+
+            nav ul {
+                gap: 1rem;
+            }
+
+            main {
+                padding: 0 1rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .hero h1 {
+                font-size: 2.2rem;
+            }
+
+            .dj-info h3 {
+                font-size: 2rem;
+            }
+
+            nav ul {
+                flex-direction: column;
+                gap: 0.5rem;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-animation" id="bgAnimation"></div>
+
+    <header>
+        <nav>
+            <div class="logo"><a href="index.html">DJAY.ca</a></div>
+            <ul>
+                <li><a href="index.html#products">Products</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
+                <li><a href="https://blog.djay.ca/" target="_blank">Blog</a></li>
+                <li><a href="booking.html" class="cta-nav-button">Book a DJ</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <section class="hero">
+            <h1>Professional DJ Services</h1>
+            <p>Book experienced DJs for your events or discover our network of recommended talent. From intimate
+                gatherings to major celebrations, find the perfect sound for your occasion.</p>
+        </section>
+
+        <section class="booking-options">
+            <div class="booking-card">
+                <h2>🎧 Book Jason Brain</h2>
+                <p>30 years of experience behind the decks. Available for weddings, corporate events, private parties,
+                    and special occasions across Canada.</p>
+                <a href="#contact" class="cta-button">Book Now</a>
+            </div>
+
+            <div class="booking-card">
+                <h2>🌟 Recommended DJs</h2>
+                <p>Discover our curated network of professional DJs. Each artist has been personally vetted for quality,
+                    professionalism, and crowd-pleasing skills.</p>
+                <a href="#recommended" class="cta-button">Browse Talent</a>
+            </div>
+        </section>
+
+        <section class="featured-dj">
+            <div class="dj-profile">
+                <div class="dj-image">
+                    <span>🎵</span>
+                </div>
+                <div class="dj-info">
+                    <h3>Jason Brain</h3>
+                    <p>With 30 years of experience and a background in programming and project management, Jason brings
+                        both technical expertise and musical intuition to every performance. As the founder of DJAY.ca,
+                        he understands what makes a crowd move and how technology can enhance the musical experience.
+                    </p>
+
+                    <div class="dj-specialties">
+                        <span class="specialty-tag">Weddings</span>
+                        <span class="specialty-tag">Corporate Events</span>
+                        <span class="specialty-tag">Private Parties</span>
+                        <span class="specialty-tag">Tech-Enhanced Sets</span>
+                        <span class="specialty-tag">Multi-Genre</span>
+                    </div>
+
+                    <a href="#contact" class="cta-button">Book Jason</a>
+                </div>
+            </div>
+        </section>
+
+        <section id="recommended" class="recommended-section">
+            <h2 class="section-title">Recommended Professional DJs</h2>
+            <p
+                style="text-align: center; margin-bottom: 3rem; opacity: 0.9; max-width: 800px; margin-left: auto; margin-right: auto;">
+                Our network of trusted DJs spans multiple genres and specialties. Each performer has been selected for
+                their professionalism, skill, and ability to create unforgettable experiences.
+            </p>
+
+            <div class="djs-grid">
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>🎶</span>
+                    </div>
+                    <h4>DJ Pulse</h4>
+                    <div class="location">Toronto, ON</div>
+                    <div class="genres">Electronic • House • Techno</div>
+                    <a href="https://example-dj-pulse.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>🎤</span>
+                    </div>
+                    <h4>DJ Harmony</h4>
+                    <div class="location">Vancouver, BC</div>
+                    <div class="genres">Wedding Specialist • Top 40 • Classic Rock</div>
+                    <a href="https://example-dj-harmony.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>🔊</span>
+                    </div>
+                    <h4>DJ Vibe</h4>
+                    <div class="location">Montreal, QC</div>
+                    <div class="genres">Hip-Hop • R&B • Latin</div>
+                    <a href="https://example-dj-vibe.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>🎧</span>
+                    </div>
+                    <h4>DJ Echo</h4>
+                    <div class="location">Calgary, AB</div>
+                    <div class="genres">Corporate Events • Jazz • Ambient</div>
+                    <a href="https://example-dj-echo.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>🎵</span>
+                    </div>
+                    <h4>DJ Nova</h4>
+                    <div class="location">Ottawa, ON</div>
+                    <div class="genres">Weddings • Folk • Indie • Alternative</div>
+                    <a href="https://example-dj-nova.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+
+                <div class="dj-card">
+                    <div class="dj-avatar">
+                        <span>⚡</span>
+                    </div>
+                    <h4>DJ Storm</h4>
+                    <div class="location">Halifax, NS</div>
+                    <div class="genres">EDM • Festivals • High-Energy Events</div>
+                    <a href="https://example-dj-storm.com" class="visit-button" target="_blank">Visit Website</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer>
+        <p>&copy; <span id="year"></span> DJAY.ca. All Rights Reserved.</p>
+        <p>
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact Us</a> |
+            <a href="privacy.html">Privacy Policy</a> |
+            <a href="terms.html">Terms of Service</a> |
+            <a href="https://blog.djay.ca/" target="_blank">Blog</a>
+        </p>
+    </footer>
+
+    <script>
+        // Background animation
+        function createParticle() {
+            const particle = document.createElement('div');
+            particle.classList.add('particle');
+            particle.style.left = Math.random() * 100 + '%';
+            particle.style.animationDuration = Math.random() * 3 + 17 + 's';
+            particle.style.opacity = Math.random();
+            particle.style.animationDelay = Math.random() * 2 + 's';
+
+            const bgAnimation = document.getElementById('bgAnimation');
+            if (bgAnimation) {
+                bgAnimation.appendChild(particle);
+
+                setTimeout(() => {
+                    particle.remove();
+                }, 20000);
+            }
+        }
+
+        // Create particles continuously
+        setInterval(createParticle, 300);
+
+        // Update year
+        document.getElementById('year').textContent = new Date().getFullYear();
+    </script>
+</body>
+
+</html>
