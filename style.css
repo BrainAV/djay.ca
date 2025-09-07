@@ -784,3 +784,15 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+.cta-nav-button {
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4) !important;
+    padding: 0.5rem 1rem !important;
+    border-radius: 25px !important;
+    font-weight: 700 !important;
+    transition: all 0.3s ease !important;
+}
+
+.cta-nav-button:hover {
+    transform: translateY(-2px) scale(1.05) !important;
+    box-shadow: 0 8px 20px rgba(255, 107, 107, 0.4) !important;
+}
