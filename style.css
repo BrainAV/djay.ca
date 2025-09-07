@@ -13,7 +13,8 @@ body {
 }
 
 /* Animated background particles - UNIFIED */
-.bg-animation, #bgAnimation {
+.bg-animation,
+#bgAnimation {
     position: fixed;
     top: 0;
     left: 0;
@@ -35,10 +36,23 @@ body {
 }
 
 @keyframes float {
-    0% { transform: translateY(100vh) translateX(0px) rotate(0deg); opacity: 0; }
-    10% { opacity: 1; }
-    90% { opacity: 1; }
-    100% { transform: translateY(-100vh) translateX(100px) rotate(360deg); opacity: 0; }
+    0% {
+        transform: translateY(100vh) translateX(0px) rotate(0deg);
+        opacity: 0;
+    }
+
+    10% {
+        opacity: 1;
+    }
+
+    90% {
+        opacity: 1;
+    }
+
+    100% {
+        transform: translateY(-100vh) translateX(100px) rotate(360deg);
+        opacity: 0;
+    }
 }
 
 /* Header - Consistent across all pages */
@@ -174,8 +188,17 @@ main {
 }
 
 @keyframes pulse {
-    0%, 100% { transform: translate(-50%, -50%) scale(1); opacity: 0.5; }
-    50% { transform: translate(-50%, -50%) scale(1.2); opacity: 0.8; }
+
+    0%,
+    100% {
+        transform: translate(-50%, -50%) scale(1);
+        opacity: 0.5;
+    }
+
+    50% {
+        transform: translate(-50%, -50%) scale(1.2);
+        opacity: 0.8;
+    }
 }
 
 .hero h1 {
@@ -201,8 +224,15 @@ main {
 }
 
 @keyframes fadeInUp {
-    from { opacity: 0; transform: translateY(30px); }
-    to { opacity: 1; transform: translateY(0); }
+    from {
+        opacity: 0;
+        transform: translateY(30px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
 }
 
 /* Products Section */
@@ -244,8 +274,13 @@ main {
 }
 
 @keyframes shimmer {
-    0% { transform: translateX(-100%) translateY(-100%) rotate(45deg); }
-    100% { transform: translateX(100%) translateY(100%) rotate(45deg); }
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
 }
 
 .product-title {
@@ -291,6 +326,7 @@ main {
     color: #ffffff;
     border: 2px solid #ff6b6b;
     position: relative;
+    overflow: visible;
 }
 
 .version-badge.pro::after {
@@ -512,7 +548,10 @@ main {
 }
 
 /* Sections on content pages */
-#about, #contact, #privacy, #terms {
+#about,
+#contact,
+#privacy,
+#terms {
     padding: 2rem 0;
 }
 
@@ -610,19 +649,23 @@ main {
     border-radius: 16px;
     padding: 2rem;
     margin-top: 2rem;
+    /* Reduced from 2rem */
     position: relative;
     z-index: 1;
 }
 
 .contact-info h3 {
     color: #ff6b6b;
-    margin-bottom: 1rem;
+    margin-top: 0;
+    /* Add this line */
+    margin-bottom: 0rem;
     font-size: 1.3rem;
 }
 
 .contact-info p {
     opacity: 0.9;
     line-height: 1.6;
+    margin-bottom: .5rem;
 }
 
 /* Footer - Consistent */
@@ -654,37 +697,63 @@ footer a:hover {
     animation: fadeInUp 0.8s ease-out forwards;
 }
 
-.fade-in.delay-1 { animation-delay: 0.1s; }
-.fade-in.delay-2 { animation-delay: 0.2s; }
-.fade-in.delay-3 { animation-delay: 0.3s; }
-.fade-in.delay-4 { animation-delay: 0.4s; }
+.fade-in.delay-1 {
+    animation-delay: 0.1s;
+}
+
+.fade-in.delay-2 {
+    animation-delay: 0.2s;
+}
+
+.fade-in.delay-3 {
+    animation-delay: 0.3s;
+}
+
+.fade-in.delay-4 {
+    animation-delay: 0.4s;
+}
 
 /* Responsive Design - Enhanced */
 @media (max-width: 768px) {
-    .hero h1 { font-size: 3rem; }
-    .product-title { font-size: 2.5rem; }
-    .content-page h2 { font-size: 2.5rem; }
-    nav ul { gap: 1rem; }
-    .version-badges { flex-direction: column; align-items: center; }
-    
+    .hero h1 {
+        font-size: 3rem;
+    }
+
+    .product-title {
+        font-size: 2.5rem;
+    }
+
+    .content-page h2 {
+        font-size: 2.5rem;
+    }
+
+    nav ul {
+        gap: 1rem;
+    }
+
+    .version-badges {
+        flex-direction: column;
+        align-items: center;
+    }
+
     header {
         padding: 1rem;
     }
-    
+
     main {
         padding: 0 1rem;
     }
-    
+
     .content-page {
         margin: 2rem auto 4rem;
         padding: 1.5rem;
     }
-    
+
     .contact-form {
         padding: 2rem 1.5rem;
         margin: 2rem 0;
     }
-    
+
     .form-group input,
     .form-group select,
     .form-group textarea {
@@ -693,15 +762,23 @@ footer a:hover {
 }
 
 @media (max-width: 480px) {
-    .hero h1 { font-size: 2.5rem; }
-    .product-title { font-size: 2rem; }
-    .content-page h2 { font-size: 2rem; }
-    
+    .hero h1 {
+        font-size: 2.5rem;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .content-page h2 {
+        font-size: 2rem;
+    }
+
     nav ul {
         flex-direction: column;
         gap: 0.5rem;
     }
-    
+
     .logo {
         font-size: 1.5rem;
     }

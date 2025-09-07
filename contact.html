@@ -1,21 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content="Contact DJAY.ca for support or inquiries about our audio software.">
     <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
 
-  gtag('config', 'G-T93274MPPZ');
-</script>
+        gtag('config', 'G-T93274MPPZ');
+    </script>
     <title>Contact Us | DJAY.ca</title>
     <link rel="stylesheet" href="style.css">
 </head>
+
 <body>
     <!-- Animated background particles -->
     <div class="bg-animation">
@@ -26,9 +28,10 @@
         <nav>
             <div class="logo"><a href="index.html" style="text-decoration: none; color: inherit;">DJAY.ca</a></div>
             <ul>
-                <li><a href="index.html#products">Products</a></li>
+                <li><a href="#products">Products</a></li>
                 <li><a href="about.html">About</a></li>
                 <li><a href="contact.html">Contact</a></li>
+                <li><a href="faq.html">FAQ</a></li>
             </ul>
         </nav>
     </header>
@@ -36,8 +39,9 @@
     <main class="content-page">
         <section id="contact">
             <h2>Contact Us</h2>
-            <p>We'd love to hear from you! Whether you have questions, feedback, or need support with our audio software, please don't hesitate to reach out using the form below.</p>
-            
+            <p>We'd love to hear from you! Whether you have questions, feedback, or need support with our audio
+                software, please don't hesitate to reach out using the form below.</p>
+
             <form action="https://formspree.io/f/myzdlwwj" method="POST" class="contact-form">
                 <div class="form-group">
                     <label for="name">Name *</label>
@@ -64,7 +68,8 @@
 
                 <div class="form-group">
                     <label for="message">Message *</label>
-                    <textarea id="message" name="message" rows="6" required placeholder="Please describe your inquiry in detail..."></textarea>
+                    <textarea id="message" name="message" rows="6" required
+                        placeholder="Please describe your inquiry in detail..."></textarea>
                 </div>
 
                 <!-- Hidden honeypot field for spam protection -->
@@ -76,7 +81,8 @@
 
             <div class="contact-info">
                 <h3>Response Time</h3>
-                <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent technical support, please mark your subject as "Technical Support".</p>
+                <p>We typically respond to all inquiries within 24-48 hours during business days. For urgent technical
+                    support, please mark your subject as "Technical Support".</p>
             </div>
         </section>
     </main>
@@ -84,9 +90,9 @@
     <footer>
         <p>&copy; <span id="year"></span> DJAY.ca. All Rights Reserved.</p>
         <p>
-            <a href="about.html">About Us</a> | 
-            <a href="contact.html">Contact Us</a> | 
-            <a href="privacy.html">Privacy Policy</a> | 
+            <a href="about.html">About Us</a> |
+            <a href="contact.html">Contact Us</a> |
+            <a href="privacy.html">Privacy Policy</a> |
             <a href="terms.html">Terms of Service</a>
         </p>
     </footer>
@@ -96,12 +102,12 @@
         // Form submission handling
         const form = document.querySelector('.contact-form');
         const submitButton = form.querySelector('button[type="submit"]');
-        
-        form.addEventListener('submit', function(e) {
+
+        form.addEventListener('submit', function (e) {
             // Show loading state
             submitButton.innerHTML = 'Sending...';
             submitButton.disabled = true;
-            
+
             // Form will be handled by Formspree
             // On success, Formspree will redirect or show success message
         });
@@ -110,7 +116,7 @@
         function createParticles() {
             const bgAnimation = document.querySelector('.bg-animation');
             const particleCount = 50;
-            
+
             for (let i = 0; i < particleCount; i++) {
                 const particle = document.createElement('div');
                 particle.classList.add('particle');
@@ -222,7 +228,7 @@
                 padding: 2rem 1.5rem;
                 margin: 2rem 0;
             }
-            
+
             .form-group input,
             .form-group select,
             .form-group textarea {
@@ -231,4 +237,5 @@
         }
     </style>
 </body>
+
 </html>
