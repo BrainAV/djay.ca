@@ -131,11 +131,14 @@
             padding: 0 2rem;
         }
 
-        /* Hero Section */
+        /* Hero Section with fade-in animation */
         .hero {
             text-align: center;
             padding: 6rem 0 4rem 0;
             position: relative;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 1s ease-out 0.2s forwards;
         }
 
         .hero::before {
@@ -166,6 +169,17 @@
             }
         }
 
+        @keyframes fadeInUp {
+            from {
+                opacity: 0;
+                transform: translateY(30px);
+            }
+            to {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+
         .hero h1 {
             font-size: 3.5rem;
             font-weight: 900;
@@ -186,7 +200,7 @@
             margin-right: auto;
         }
 
-        /* Booking Options */
+        /* Booking Options with fade-in animations */
         .booking-options {
             display: grid;
             grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
@@ -204,6 +218,16 @@
             overflow: hidden;
             transition: all 0.3s ease;
             text-align: center;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .booking-card.fade-in-left {
+            animation: fadeInUp 0.8s ease-out 0.4s forwards;
+        }
+
+        .booking-card.fade-in-right {
+            animation: fadeInUp 0.8s ease-out 0.6s forwards;
         }
 
         .booking-card::before {
@@ -275,7 +299,7 @@
             box-shadow: 0 15px 40px rgba(255, 107, 107, 0.5), 0 0 30px rgba(78, 205, 196, 0.3);
         }
 
-        /* Featured DJ Section */
+        /* Featured DJ Section with animation */
         .featured-dj {
             background: linear-gradient(135deg, rgba(255, 107, 107, 0.05), rgba(78, 205, 196, 0.05));
             border-radius: 20px;
@@ -284,6 +308,9 @@
             border: 1px solid rgba(255, 255, 255, 0.1);
             position: relative;
             overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 0.8s forwards;
         }
 
         .dj-profile {
@@ -348,9 +375,12 @@
             border: 1px solid rgba(78, 205, 196, 0.3);
         }
 
-        /* Recommended DJs Grid */
+        /* Recommended DJs Grid with staggered animations */
         .recommended-section {
             padding: 4rem 0;
+            opacity: 0;
+            transform: translateY(30px);
+            animation: fadeInUp 0.8s ease-out 1s forwards;
         }
 
         .section-title {
@@ -379,6 +409,32 @@
             text-align: center;
             position: relative;
             overflow: hidden;
+            opacity: 0;
+            transform: translateY(30px);
+        }
+
+        .dj-card.fade-in-1 {
+            animation: fadeInUp 0.8s ease-out 1.2s forwards;
+        }
+
+        .dj-card.fade-in-2 {
+            animation: fadeInUp 0.8s ease-out 1.4s forwards;
+        }
+
+        .dj-card.fade-in-3 {
+            animation: fadeInUp 0.8s ease-out 1.6s forwards;
+        }
+
+        .dj-card.fade-in-4 {
+            animation: fadeInUp 0.8s ease-out 1.8s forwards;
+        }
+
+        .dj-card.fade-in-5 {
+            animation: fadeInUp 0.8s ease-out 2s forwards;
+        }
+
+        .dj-card.fade-in-6 {
+            animation: fadeInUp 0.8s ease-out 2.2s forwards;
         }
 
         .dj-card::before {
@@ -528,14 +584,14 @@
         </section>
 
         <section class="booking-options">
-            <div class="booking-card">
+            <div class="booking-card fade-in-left">
                 <h2>🎧 Book Jason Brain</h2>
                 <p>30 years of experience behind the decks. Available for weddings, corporate events, private parties,
                     and special occasions across Canada.</p>
                 <a href="#contact" class="cta-button">Book Now</a>
             </div>
 
-            <div class="booking-card">
+            <div class="booking-card fade-in-right">
                 <h2>🌟 Recommended DJs</h2>
                 <p>Discover our curated network of professional DJs. Each artist has been personally vetted for quality,
                     professionalism, and crowd-pleasing skills.</p>
@@ -577,7 +633,7 @@
             </p>
 
             <div class="djs-grid">
-                <div class="dj-card">
+                <div class="dj-card fade-in-1">
                     <div class="dj-avatar">
                         <span>🎶</span>
                     </div>
@@ -587,7 +643,7 @@
                     <a href="https://example-dj-pulse.com" class="visit-button" target="_blank">Visit Website</a>
                 </div>
 
-                <div class="dj-card">
+                <div class="dj-card fade-in-2">
                     <div class="dj-avatar">
                         <span>🎤</span>
                     </div>
@@ -597,7 +653,7 @@
                     <a href="https://example-dj-harmony.com" class="visit-button" target="_blank">Visit Website</a>
                 </div>
 
-                <div class="dj-card">
+                <div class="dj-card fade-in-3">
                     <div class="dj-avatar">
                         <span>🔊</span>
                     </div>
@@ -607,7 +663,7 @@
                     <a href="https://example-dj-vibe.com" class="visit-button" target="_blank">Visit Website</a>
                 </div>
 
-                <div class="dj-card">
+                <div class="dj-card fade-in-4">
                     <div class="dj-avatar">
                         <span>🎧</span>
                     </div>
@@ -617,7 +673,7 @@
                     <a href="https://example-dj-echo.com" class="visit-button" target="_blank">Visit Website</a>
                 </div>
 
-                <div class="dj-card">
+                <div class="dj-card fade-in-5">
                     <div class="dj-avatar">
                         <span>🎵</span>
                     </div>
@@ -627,7 +683,7 @@
                     <a href="https://example-dj-nova.com" class="visit-button" target="_blank">Visit Website</a>
                 </div>
 
-                <div class="dj-card">
+                <div class="dj-card fade-in-6">
                     <div class="dj-avatar">
                         <span>⚡</span>
                     </div>
