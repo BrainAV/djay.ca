@@ -12,8 +12,8 @@ Welcome to DJAY.ca - where we build creative and accessible audio tools for musi
 
 ### 🎛️ Available Versions
 
-- **[DJ MixKit Basic](https://mixkit.djay.ca)** - Launch now and start mixing!
-- **DJ MixKit Pro** - Coming Soon with advanced features
+- **[DJ MixKit Basic (Concept Demo)](https://mixkit.djay.ca)** - Launch now and start mixing!
+- **DJ MixKit Standard (First Beta v0.1)** - Coming Soon with advanced features
 
 ---
 
