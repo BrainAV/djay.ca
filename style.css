@@ -12,6 +12,19 @@ body {
     overflow-x: hidden;
 }
 
+/* Base link styles */
+a {
+    color: #4ecdc4;
+    text-decoration: none;
+    font-weight: 600;
+    transition: all 0.3s ease;
+}
+
+a:hover {
+    color: #5ed4d0;
+    text-shadow: 0 0 5px rgba(78, 205, 196, 0.5);
+}
+
 /* Animated background particles - UNIFIED */
 .bg-animation,
 #bgAnimation {
