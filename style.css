@@ -503,6 +503,7 @@ main {
     background-clip: text;
     position: relative;
     z-index: 1;
+    text-align: center;
 }
 
 .content-page p {
