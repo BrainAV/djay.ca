@@ -188,7 +188,6 @@ main {
 }
 
 @keyframes pulse {
-
     0%,
     100% {
         transform: translate(-50%, -50%) scale(1);
@@ -235,6 +234,72 @@ main {
     }
 }
 
+/* Booking Options */
+.booking-options {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 3rem;
+    margin: 4rem 0 6rem 0;
+}
+
+.booking-card {
+    background: linear-gradient(135deg, rgba(255, 107, 107, 0.1), rgba(78, 205, 196, 0.1));
+    border-radius: 20px;
+    padding: 3rem 2rem;
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    backdrop-filter: blur(10px);
+    position: relative;
+    overflow: hidden;
+    transition: all 0.3s ease;
+    text-align: center;
+}
+
+.booking-card::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
+    transform: rotate(45deg);
+    animation: shimmer 3s infinite;
+}
+
+@keyframes shimmer {
+    0% {
+        transform: translateX(-100%) translateY(-100%) rotate(45deg);
+    }
+
+    100% {
+        transform: translateX(100%) translateY(100%) rotate(45deg);
+    }
+}
+
+.booking-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+}
+
+.booking-card h2 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+    background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    position: relative;
+    z-index: 1;
+}
+
+.booking-card p {
+    margin-bottom: 2rem;
+    opacity: 0.9;
+    font-size: 1.1rem;
+    position: relative;
+    z-index: 1;
+}
+
 /* Products Section */
 #products {
     padding: 6rem 0;
@@ -271,16 +336,6 @@ main {
     background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.03), transparent);
     transform: rotate(45deg);
     animation: shimmer 3s infinite;
-}
-
-@keyframes shimmer {
-    0% {
-        transform: translateX(-100%) translateY(-100%) rotate(45deg);
-    }
-
-    100% {
-        transform: translateX(100%) translateY(100%) rotate(45deg);
-    }
 }
 
 .product-title {
@@ -450,7 +505,6 @@ main {
     margin: 4rem auto 6rem;
     padding: 2rem;
     text-align: left;
-    /* Remove the box styling */
 }
 
 /* Option 2: Subtle accent style (uncomment to use) */
@@ -650,7 +704,6 @@ main {
     border-radius: 16px;
     padding: 2rem;
     margin-top: 2rem;
-    /* Reduced from 2rem */
     position: relative;
     z-index: 1;
 }
@@ -658,7 +711,6 @@ main {
 .contact-info h3 {
     color: #ff6b6b;
     margin-top: 0;
-    /* Add this line */
     margin-bottom: 0rem;
     font-size: 1.3rem;
 }
@@ -760,6 +812,10 @@ footer a:hover {
     .form-group textarea {
         padding: 0.8rem;
     }
+
+    .booking-options {
+        grid-template-columns: 1fr;
+    }
 }
 
 @media (max-width: 480px) {
@@ -784,6 +840,7 @@ footer a:hover {
         font-size: 1.5rem;
     }
 }
+
 .cta-nav-button {
     background: linear-gradient(135deg, #ff6b6b, #4ecdc4) !important;
     padding: 0.5rem 1rem !important;
