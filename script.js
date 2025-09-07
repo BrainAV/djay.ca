@@ -289,17 +289,3 @@ document.addEventListener("DOMContentLoaded", () => {
     lazyElements.forEach((el) => lazyObserver.observe(el));
   }
 });
-
-// Load header 
-fetch("includes/header.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("header-placeholder").innerHTML = data;
-  });
-
-// Load for footer
-fetch("includes/footer.html")
-  .then((response) => response.text())
-  .then((data) => {
-    document.getElementById("footer-placeholder").innerHTML = data;
-  });
