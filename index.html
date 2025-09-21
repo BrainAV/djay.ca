@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="DJAY.ca is a creative studio designing innovative audio software like the popular DJ MixKit web application.">
-    <meta name="keywords" content="DJAY.ca, DJ, Audio Software, Web Apps, Music Production, DJ MixKit">
+        content="DJAY.ca is a creative studio designing innovative audio software like the popular DJ MixKit web application and the upcoming DJ & Event Planner Pro.">
+    <meta name="keywords" content="DJAY.ca, DJ, Audio Software, Web Apps, Music Production, DJ MixKit, Event Planning">
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
     <script>
@@ -35,11 +35,27 @@
             <div class="hero-text">
                 <h1>Welcome to DJAY.ca</h1>
                 <p>We build creative and accessible audio tools for musicians, DJs, and producers. Experience the future
-                    of browser-based DJ software.</p>
+                    of browser-based DJ software and professional event management.</p>
                 <a href="#products" class="cta-button">Explore Our Products</a>
             </div>
         </section>
         
+        <!-- Coming Soon Teaser Section -->
+        <section class="coming-soon-preview">
+            <div class="preview-content">
+                <div class="preview-badge">🚀 Coming Soon</div>
+                <h2>DJ & Event Planner Pro</h2>
+                <p>The ultimate online planning tool for DJs and event professionals. Manage clients, bookings, contracts, and grow your business with our comprehensive platform launching in Q2 2026.</p>
+                <div class="preview-highlights">
+                    <span class="highlight-item">📅 Event Calendar</span>
+                    <span class="highlight-item">👥 Client Management</span>
+                    <span class="highlight-item">💰 Invoicing & Contracts</span>
+                    <span class="highlight-item">🎵 Music Requests</span>
+                </div>
+                <a href="waitlist.html" class="cta-button preview-cta">Join the Waitlist</a>
+                <div class="early-bird-note">Early subscribers get 50% off first year + lifetime updates!</div>
+            </div>
+        </section>
 
         <section id="products">
             <h2>Featured Product</h2>
@@ -73,12 +89,13 @@
                     <h3>🎚️ Effects & Mixer</h3>
                     <p>Professional crossfader, 3-band EQ, and real-time effects to shape your unique sound.</p>
                 </div>
-<div class="feature-item fade-in delay-4">
+                <div class="feature-item fade-in delay-4">
                     <h3>🌐 No Installation</h3>
                     <p>Runs entirely in your browser. No downloads or setup required. For offline use, save the page or get the HTML package from our <a href="https://github.com/jasonbra1n/MixKit" target="_blank">GitHub repo</a>.</p>
                 </div>
             </div>
         </section>
+        
         <!-- New DJ Booking Section -->
         <section id="booking-preview" class="booking-preview-section">
             <div class="booking-preview-content">
@@ -142,21 +159,20 @@
                 </div>
             </div>
         </section>
-        
-
     </main>
 
     <!-- Include footer -->
     <div id="footer-placeholder"></div>
     <!-- Scroll to Top Button -->
-<button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
-    <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
-        <path d="M12 4L4 12L6.5 14.5L12 9L17.5 14.5L20 12L12 4Z" fill="currentColor"/>
-    </svg>
-</button>
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12L6.5 14.5L12 9L17.5 14.5L20 12L12 4Z" fill="currentColor"/>
+        </svg>
+    </button>
 
     <script src="script.js"></script>
-    <script>// Load header 
+    <script>
+        // Load header 
         fetch("includes/header.html")
             .then((response) => response.text())
             .then((data) => {
@@ -175,7 +191,167 @@
             .then((response) => response.text())
             .then((data) => {
                 document.getElementById("footer-placeholder").innerHTML = data;
-            });</script>
-    </body>
+            });
+    </script>
+
+    <style>
+        /* Coming Soon Preview Section */
+        .coming-soon-preview {
+            background: linear-gradient(135deg, rgba(255, 107, 107, 0.08), rgba(78, 205, 196, 0.08));
+            border-radius: 20px;
+            padding: 4rem 2rem;
+            margin: 4rem 0;
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            backdrop-filter: blur(10px);
+            position: relative;
+            overflow: hidden;
+            text-align: center;
+        }
+
+        .coming-soon-preview::before {
+            content: '';
+            position: absolute;
+            top: -50%;
+            left: -50%;
+            width: 200%;
+            height: 200%;
+            background: linear-gradient(45deg, transparent, rgba(255, 255, 255, 0.02), transparent);
+            transform: rotate(45deg);
+            animation: shimmer 4s infinite;
+        }
+
+        .preview-content {
+            position: relative;
+            z-index: 2;
+            max-width: 800px;
+            margin: 0 auto;
+        }
+
+        .preview-badge {
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            color: white;
+            padding: 0.6rem 1.2rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-bottom: 1.5rem;
+            font-weight: 700;
+            font-size: 0.95rem;
+            animation: pulse 2s infinite;
+            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
+        }
+
+        .coming-soon-preview h2 {
+            font-size: 2.8rem;
+            margin-bottom: 1.5rem;
+            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            font-weight: 900;
+        }
+
+        .coming-soon-preview p {
+            font-size: 1.2rem;
+            margin-bottom: 2rem;
+            opacity: 0.9;
+            line-height: 1.6;
+        }
+
+        .preview-highlights {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 1rem;
+            margin: 2rem 0;
+        }
+
+        .highlight-item {
+            background: rgba(255, 255, 255, 0.08);
+            border: 1px solid rgba(255, 255, 255, 0.15);
+            padding: 0.6rem 1rem;
+            border-radius: 15px;
+            font-size: 0.9rem;
+            font-weight: 600;
+            backdrop-filter: blur(5px);
+            transition: all 0.3s ease;
+        }
+
+        .highlight-item:hover {
+            background: rgba(78, 205, 196, 0.1);
+            border-color: rgba(78, 205, 196, 0.3);
+            transform: translateY(-2px);
+        }
+
+        .preview-cta {
+            margin: 2rem 0 1rem 0;
+            display: inline-block;
+        }
+
+        .early-bird-note {
+            font-size: 0.95rem;
+            color: #4ecdc4;
+            font-weight: 600;
+            opacity: 0.9;
+            background: rgba(78, 205, 196, 0.1);
+            border: 1px solid rgba(78, 205, 196, 0.2);
+            padding: 0.8rem 1.5rem;
+            border-radius: 20px;
+            display: inline-block;
+            margin-top: 1rem;
+            backdrop-filter: blur(5px);
+        }
+
+        /* Responsive Design for Preview Section */
+        @media (max-width: 768px) {
+            .coming-soon-preview {
+                padding: 3rem 1.5rem;
+                margin: 3rem 0;
+            }
+
+            .coming-soon-preview h2 {
+                font-size: 2.2rem;
+            }
+
+            .coming-soon-preview p {
+                font-size: 1.1rem;
+            }
+
+            .preview-highlights {
+                gap: 0.8rem;
+            }
+
+            .highlight-item {
+                font-size: 0.85rem;
+                padding: 0.5rem 0.8rem;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .coming-soon-preview {
+                padding: 2.5rem 1rem;
+            }
+
+            .coming-soon-preview h2 {
+                font-size: 1.8rem;
+            }
+
+            .preview-highlights {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .highlight-item {
+                display: block;
+                text-align: center;
+                min-width: 200px;
+            }
+
+            .early-bird-note {
+                font-size: 0.9rem;
+                padding: 0.7rem 1.2rem;
+            }
+        }
+    </style>
+</body>
 
 </html>
