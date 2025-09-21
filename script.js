@@ -1,3 +1,11 @@
+// javascript
+window.onload = function() { 
+  var el = document.getElementById('g-recaptcha-response'); 
+  if (el) { 
+    el.setAttribute('required', 'required'); 
+  } 
+}
+
 // Unified particle creation system
 function createParticle() {
   const particle = document.createElement("div");
@@ -327,3 +335,4 @@ document.addEventListener('DOMContentLoaded', () => {
         navMenu.classList.toggle('active');
     });
 });
+
