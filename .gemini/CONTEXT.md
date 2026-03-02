@@ -6,8 +6,9 @@ DJAY.ca is the central hub and portal for all audio software and DJ services cre
 ## Product Ecosystem
 1. **Radio Stream Player (`radio.djay.ca`)**: A sleek, web-based radio player. Supports custom stations, dynamic visualizations, and secure HTTP-to-HTTPS proxying via Cloudflare Workers.
 2. **DJ MixKit (`mixkit.djay.ca`)**: A powerful browser-based DJ software featuring dual decks, effects, and mixing capabilities, requiring no installation.
-3. **DJ & Event Planner Pro (Coming Q2 2026)**: A comprehensive CRM and event management tool for professional DJs.
-4. **Professional DJ Services**: Booking and information for Jason Brain and a curated network of professional DJs across Canada.
+3. **Jukebox App (In Development)**: A "Touch Tunes"-style collaborative jukebox experience, currently being prototyped by BrainAV.
+4. **DJ & Event Planner Pro (Coming Q2 2026)**: A comprehensive CRM and event management tool for professional DJs.
+5. **Professional DJ Services**: Booking and information for Jason Brain and a curated network of professional DJs across Canada.
 
 ## Architecture & Style
 - **Tech Stack**: Vanilla HTML, CSS, and JavaScript.
