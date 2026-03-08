@@ -1719,3 +1719,53 @@ footer a:hover {
     color: rgba(255, 255, 255, 0.6);
     font-style: italic;
 }
+
+/* Deep Mobile Optimization (AdSense Guidelines) */
+@media (max-width: 480px) {
+    .feature-grid,
+    .product-grid,
+    .instructions-grid,
+    .djs-grid,
+    .blog-grid,
+    .faq-section {
+        grid-template-columns: 1fr !important;
+        gap: 1.5rem;
+    }
+
+    .hero h1 {
+        font-size: 2.2rem;
+    }
+
+    .product-title {
+        font-size: 2rem;
+    }
+
+    .content-page h2, .section-title {
+        font-size: 2rem;
+    }
+
+    .cta-button, .visit-button {
+        padding: 1rem 1.5rem;
+        font-size: 1rem;
+        width: 100%;
+        text-align: center;
+        margin-bottom: 0.5rem;
+        display: block;
+    }
+
+    .hero-cta-container {
+        flex-direction: column;
+        gap: 1rem;
+    }
+
+    section {
+        padding: 3rem 1rem !important;
+    }
+
+    .glass-panel, .dj-card, .blog-card {
+        padding: 1.5rem !important;
+        margin-left: 0.5rem;
+        margin-right: 0.5rem;
+    }
+}
+
