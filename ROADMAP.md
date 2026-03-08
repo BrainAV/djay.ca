@@ -12,7 +12,7 @@ This document outlines the strategic vision and future additions for the DJAY.ca
   - [x] **Blog Integration:** Embed the latest posts from `blog.djay.ca` onto the landing page to provide fresh, text-rich content.
   - [x] **Dedicated Product Pages:** Create standalone pages for the Radio Stream Player and DJ MixKit (`/radio-player.html`, `/mixkit.html`) with 500-800 words detailing their history, technical stack (Cloudflare routing, Web Audio API), tutorials, and use-cases to eliminate "thin content" risks.
   - [x] **FAQ Expansion:** Expand the `faq.html` page to include robust, multi-paragraph answers to increase organic word count and keyword density.
-  - [ ] **Mobile Layout Audit:** Conduct a strict mobile-first audit ensuring zero overlapping elements, no horizontal scrolling, and perfect legibility to meet AdSense mobile review standards.
+  - [x] **Mobile Layout Audit:** Conduct a strict mobile-first audit ensuring zero overlapping elements, no horizontal scrolling, and perfect legibility to meet AdSense mobile review standards.
 
 ---
 
