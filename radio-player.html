@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description"
+        content="Radio Stream Player by DJAY.ca - A stunning, zero-installation internet radio portal. Listen to global streams ad-free.">
+    <meta name="keywords" content="Internet Radio, Live Streaming, Radio Player, Custom Streams, Web Audio API, DJAY.ca">
+
+    <title>Radio Stream Player | DJAY.ca</title>
+    <link rel="stylesheet" href="style.css">
+    <!-- Google tag (gtag.js) -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+        gtag('config', 'G-T93274MPPZ');
+    </script>
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-0633259514526906"
+        crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <!-- Animated background particles -->
+    <div class="bg-animation"></div>
+    
+    <!-- Include header -->
+    <div id="header-placeholder"></div>
+
+    <main>
+        <!-- Hero Section -->
+        <section class="hero">
+            <div class="glass-panel shimmer-effect" style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px;">
+                <h1 class="gradient-text">Radio Stream Player</h1>
+                <p>A beautiful, highly customizable internet radio portal. Listen to curated global streams or add your own ad-free.</p>
+                <div class="hero-cta-container">
+                    <a href="https://radio.djay.ca" class="cta-button primary" target="_blank">Launch Radio</a>
+                    <a href="https://github.com/BrainAV/Radio-Stream-Player" class="cta-button secondary" target="_blank">View on GitHub</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Features Overview -->
+        <section id="features" style="padding-top: 2rem;">
+            <div class="feature-grid">
+                <div class="feature-item fade-in delay-1">
+                    <h3>📻 Custom Stations</h3>
+                    <p>Start with our curated electronic music streams from DI.FM and others, or easily add your own HTTP/HTTPS stream URLs to build a massive personal library.</p>
+                </div>
+                <div class="feature-item fade-in delay-2">
+                    <h3>✨ Live Metadata Integration</h3>
+                    <p>Experience real-time track, artist, and show information. Data is pulled directly from Icecast/Shoutcast streams and securely synced to your OS lock screen via the MediaSession API.</p>
+                </div>
+                <div class="feature-item fade-in delay-3">
+                    <h3>📊 Web Audio Visualizers</h3>
+                    <p>Transform your listening experience with beautiful, hardware-accelerated audio visualization. Built entirely using vanilla JS Canvas and the Web Audio API with multiple distinct drawing styles.</p>
+                </div>
+                <div class="feature-item fade-in delay-4">
+                    <h3>🛡️ Secure Edge Proxy</h3>
+                    <p>Natively bypass restrictive browser "Mixed Content" warnings. We use a custom Cloudflare Workers edge network proxy to securely wrap standard HTTP radio streams into HTTPS.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Open Source Section -->
+        <section class="content-section glass-panel shimmer-effect" style="margin-top: 4rem; padding: 2rem;">
+            <h2 class="gradient-text">Open Source Architecture</h2>
+            <p>The Radio Stream Player is proudly open-source and built with vanilla web technologies to remain lightweight and lightning-fast. The architecture revolves around a robust <code>Audio</code> element wrapper capable of auto-reconnecting dropped streams, handling cross-origin (CORS) constraints dynamically, and exposing raw frequency data to our visualization canvas engine.</p>
+            <p style="margin-top: 1rem;">Have a feature request or want to contribute new visualizer styles? Head over to our <a href="https://github.com/BrainAV/Radio-Stream-Player" target="_blank" style="color: #4ecdc4;">GitHub Repository</a>.</p>
+        </section>
+
+    </main>
+
+    <!-- Include footer -->
+    <div id="footer-placeholder"></div>
+    
+    <!-- Scroll to Top Button -->
+    <button id="scrollToTop" class="scroll-to-top" aria-label="Scroll to top">
+        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <path d="M12 4L4 12L6.5 14.5L12 9L17.5 14.5L20 12L12 4Z" fill="currentColor" />
+        </svg>
+    </button>
+
+    <script src="script.js"></script>
+    <script>
+        // Load header 
+        fetch("includes/header.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("header-placeholder").innerHTML = data;
+                const hamburger = document.querySelector('.hamburger');
+                const navMenu = document.querySelector('.nav-container');
+
+                if(hamburger && navMenu) {
+                    hamburger.addEventListener('click', () => {
+                        hamburger.classList.toggle('active');
+                        navMenu.classList.toggle('active');
+                    });
+                }
+            });
+
+        // Load for footer
+        fetch("includes/footer.html")
+            .then((response) => response.text())
+            .then((data) => {
+                document.getElementById("footer-placeholder").innerHTML = data;
+            });
+    </script>
+</body>
+</html>

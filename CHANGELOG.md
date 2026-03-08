@@ -6,6 +6,18 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- Created dedicated standalone product pages (`mixkit.html` and `radio-player.html`) to improve SEO content density.
+- Migrated specific product FAQs from the main `faq.html` page to their respective new product pages.
+- Defined two new Agent Skills (`db-integration-manager` and `auth-manager`) to establish architecture rules for future backend updates (supporting both cPanel/MySQL and modern Serverless stacks).
+
+### Changed
+- Built a premium `.faq-section` and `.faq-item` CSS framework in `style.css` featuring glassmorphism and animated sliding gradients on hover.
+- Rebuilt the FAQ section on `mixkit.html` to utilize this new premium design pattern.
+- Overhauled `faq.html` with new general questions detailing the DJAY.ca ecosystem.
+- Improved the layout structure of the new standalone product pages (`mixkit.html` and `radio-player.html`) to ensure they match the full-width, high-quality glassmorphism aesthetic of the main `index.html` page.
+- Updated the `.agent/skills/ui-consistency/SKILL.md` rules to explicitly dictate FAQ structuring and when to use `.content-page` wrappers versus full-width section patterns.
+- Updated the main `index.html` to link 'Learn More' buttons to the new standalone product pages instead of relying entirely on external application links.
 
 ## [1.0.0] - 2026-03-07
 ### Added
