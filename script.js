@@ -361,3 +361,78 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(headerPlaceholder, { childList: true, subtree: true });
 });
 
+// Blogger JSON Feed Integration
+async function fetchBlogPosts() {
+    const blogContainer = document.getElementById('blog-container');
+    if (!blogContainer) return;
+
+    try {
+        // Fetch Blogger feed formatted as JSON
+        const response = await fetch('https://blog.djay.ca/feeds/posts/default?alt=json');
+        
+        if (!response.ok) {
+            throw new Error(`HTTP error! status: ${response.status}`);
+        }
+        
+        const data = await response.json();
+        const entries = data.feed.entry || [];
+        
+        blogContainer.innerHTML = ''; // Clear loading message
+        
+        if (entries.length === 0) {
+            blogContainer.innerHTML = '<p style="text-align: center; width: 100%;">No posts found yet.</p>';
+            return;
+        }
+
+        // Loop through the posts (up to 3 for the preview)
+        const maxPosts = Math.min(entries.length, 3);
+        for (let i = 0; i < maxPosts; i++) {
+            const post = entries[i];
+            
+            // Extract title
+            const title = post.title.$t;
+            
+            // Extract full content or snippet (Blogger provides full content by default)
+            let rawContent = post.content ? post.content.$t : (post.summary ? post.summary.$t : "");
+            
+            // Strip HTML to create a clean text snippet
+            let tmp = document.createElement("DIV");
+            tmp.innerHTML = rawContent;
+            let textSnippet = tmp.textContent || tmp.innerText || "";
+            textSnippet = textSnippet.substring(0, 150) + "..."; // 150 char limit
+            
+            // Extract the alternate link (the actual post URL)
+            let postUrl = '#';
+            for (let j = 0; j < post.link.length; j++) {
+                if (post.link[j].rel === 'alternate') {
+                    postUrl = post.link[j].href;
+                    break;
+                }
+            }
+
+            // Extract Published Date
+            const pubDate = new Date(post.published.$t);
+            const formattedDate = pubDate.toLocaleDateString("en-US", { year: 'numeric', month: 'long', day: 'numeric' });
+
+            // Build HTML Card
+            const cardHtml = `
+                <a href="${postUrl}" target="_blank" class="blog-card fade-in glass-panel">
+                    <div class="blog-meta">${formattedDate}</div>
+                    <h3>${title}</h3>
+                    <p>${textSnippet}</p>
+                    <div class="read-more">Read Article &rarr;</div>
+                </a>
+            `;
+            
+            blogContainer.innerHTML += cardHtml;
+        }
+
+    } catch (error) {
+        console.error("Failed to fetch DJAY.ca blog posts:", error);
+        blogContainer.innerHTML = '<p style="text-align: center; width: 100%; color: #ff6b6b;">Failed to load the latest news. Please visit <a href="https://blog.djay.ca" style="text-decoration: underline;" target="_blank">blog.djay.ca</a> directly.</p>';
+    }
+}
+
+// Initialize the blog fetch when the DOM loads
+document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+
