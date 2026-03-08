@@ -153,6 +153,11 @@ header {
     transition: all 0.3s ease;
 }
 
+header.scrolled {
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.5);
+    background: rgba(10, 10, 10, 0.95);
+}
+
 nav {
     display: flex;
     justify-content: space-between;
@@ -193,8 +198,27 @@ nav ul li a {
 }
 
 nav ul li a:hover {
-    background: rgba(255, 255, 255, 0.1);
+    background: var(--glass-bg-subtle);
+    border: 1px solid rgba(255, 255, 255, 0.05);
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
     transform: translateY(-2px);
+}
+
+nav ul li a.active {
+    color: var(--primary);
+    background: rgba(255, 255, 255, 0.05);
+    font-weight: 600;
+}
+
+nav ul li a.active::after {
+    content: '';
+    position: absolute;
+    bottom: -2px;
+    left: 10%;
+    width: 80%;
+    height: 3px;
+    background: var(--gradient-primary);
+    border-radius: 2px;
 }
 
 /* CTA Button */
@@ -1168,12 +1192,20 @@ footer a:hover {
         width: 100%;
         background: rgba(0, 0, 0, 0.95);
         backdrop-filter: blur(10px);
-        display: none;
         padding: 2rem 0;
+        opacity: 0;
+        visibility: hidden;
+        transform: translateY(-10px);
+        transition: all 0.3s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+        display: block;
     }
 
     .nav-container.active {
-        display: block;
+        opacity: 1;
+        visibility: visible;
+        transform: translateY(0);
+        box-shadow: 0 20px 40px rgba(0, 0, 0, 0.5);
     }
 
     nav ul {
@@ -1421,4 +1453,171 @@ footer a:hover {
 .faq-item p {
     color: rgba(255, 255, 255, 0.9);
     line-height: 1.8;
+}
+
+/* DJ Booking Page Specifics */
+.featured-dj {
+    padding: 3rem 4rem;
+    margin: 4rem 0;
+}
+
+.dj-profile {
+    display: flex;
+    align-items: center;
+    gap: 3rem;
+}
+
+.dj-image {
+    flex-shrink: 0;
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 5rem;
+    box-shadow: 0 10px 30px rgba(78, 205, 196, 0.4);
+    border: 4px solid rgba(255, 255, 255, 0.1);
+    transition: transform 0.4s ease;
+}
+
+.dj-profile:hover .dj-image {
+    transform: scale(1.05) rotate(5deg);
+}
+
+.dj-info h3 {
+    font-size: 2.2rem;
+    margin-bottom: 1rem;
+}
+
+.dj-info p {
+    font-size: 1.1rem;
+    line-height: 1.8;
+    opacity: 0.9;
+    margin-bottom: 1.5rem;
+}
+
+.dj-specialties {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.8rem;
+    margin-bottom: 2rem;
+}
+
+.specialty-tag {
+    background: rgba(255, 255, 255, 0.1);
+    color: #fff;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    font-weight: 600;
+    border: 1px solid rgba(255, 255, 255, 0.2);
+    backdrop-filter: blur(5px);
+}
+
+.recommended-section {
+    padding: 2rem 0 6rem;
+    text-align: center;
+}
+
+.recommended-section .section-title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.djs-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 2.5rem;
+    margin-top: 4rem;
+}
+
+.dj-card {
+    padding: 3rem 2rem;
+    border-radius: 20px;
+    text-align: center;
+    transition: all 0.3s ease;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.dj-card:hover {
+    transform: translateY(-10px);
+    box-shadow: 0 20px 50px rgba(0, 0, 0, 0.3);
+    border-color: rgba(78, 205, 196, 0.4);
+}
+
+.dj-avatar {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    background: var(--glass-bg-subtle);
+    border: 2px solid rgba(78, 205, 196, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    transition: transform 0.3s ease;
+}
+
+.dj-card:hover .dj-avatar {
+    transform: scale(1.1);
+    background: var(--gradient-primary);
+}
+
+.dj-card h4 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+}
+
+.location {
+    font-weight: 600;
+    color: var(--accent-2);
+    margin-bottom: 1rem;
+    font-size: 0.9rem;
+    text-transform: uppercase;
+    letter-spacing: 1px;
+}
+
+.genres {
+    font-size: 0.95rem;
+    opacity: 0.8;
+    line-height: 1.5;
+    margin-bottom: 2rem;
+    flex-grow: 1;
+}
+
+.visit-button {
+    color: #fff;
+    border: 2px solid var(--primary);
+    padding: 0.6rem 1.5rem;
+    border-radius: 25px;
+    font-weight: 600;
+    transition: all 0.3s ease;
+    display: inline-block;
+}
+
+.visit-button:hover {
+    background: var(--primary);
+    color: #fff;
+    box-shadow: 0 5px 15px rgba(78, 205, 196, 0.3);
+}
+
+@media (max-width: 768px) {
+    .featured-dj {
+        padding: 2rem;
+    }
+    
+    .dj-profile {
+        flex-direction: column;
+        text-align: center;
+        gap: 2rem;
+    }
+
+    .dj-specialties {
+        justify-content: center;
+    }
 }

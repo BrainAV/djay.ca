@@ -327,12 +327,37 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 document.addEventListener('DOMContentLoaded', () => {
-    const hamburger = document.querySelector('.hamburger');
-    const navMenu = document.querySelector('.nav-container');
+    // 1. We must use a MutationObserver because the header is loaded asynchronously via fetch()
+    const headerPlaceholder = document.getElementById('header-placeholder');
+    if (!headerPlaceholder) return;
 
-    hamburger.addEventListener('click', () => {
-        hamburger.classList.toggle('active');
-        navMenu.classList.toggle('active');
+    const observer = new MutationObserver((mutations, obs) => {
+        const hamburger = document.querySelector('.hamburger');
+        const navMenu = document.querySelector('.nav-container');
+        const navLinks = document.querySelectorAll('nav ul li a');
+
+        // Once the header is injected, apply our active logic and event listeners
+        if (hamburger && navMenu && navLinks.length > 0) {
+            // Apply Active Class based on URL
+            const currentPath = window.location.pathname.split("/").pop() || "index.html";
+            navLinks.forEach(link => {
+                const href = link.getAttribute('href');
+                if (href && href.includes(currentPath)) {
+                    link.classList.add('active');
+                }
+            });
+
+            // Bind global hamburger menu click
+            hamburger.addEventListener('click', () => {
+                hamburger.classList.toggle('active');
+                navMenu.classList.toggle('active');
+            });
+
+            // Disconnect observer once initialized
+            obs.disconnect();
+        }
     });
+
+    observer.observe(headerPlaceholder, { childList: true, subtree: true });
 });
 

@@ -12,6 +12,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Defined two new Agent Skills (`db-integration-manager` and `auth-manager`) to establish architecture rules for future backend updates (supporting both cPanel/MySQL and modern Serverless stacks).
 
 ### Changed
+- Elevated the navigation menu UI (`includes/header.html`) by introducing a soft scroll shadow to the header, sub-glassmorphism hover states for nav links, and a sliding fade-in animation for the mobile hamburger menu in `style.css`.
+- Refactored `script.js` to include a global `MutationObserver` that automatically parses the URL and apples an `.active` CSS state to navigation links once the header is fetched dynamically, while patching mobile menu initializations.
+- Built a premium CSS framework for the `booking.html` page, specifically adding `margin` and `padding` to `.featured-dj` and introducing a beautifully responsive `.djs-grid`.
+- Designed a custom hovering card aesthetic for individual DJs (`.dj-card` and `.dj-avatar`) with gradient interactions and structural matching to the site's glassmorphism style.
 - Built a premium `.faq-section` and `.faq-item` CSS framework in `style.css` featuring glassmorphism and animated sliding gradients on hover.
 - Rebuilt the FAQ section on `mixkit.html` to utilize this new premium design pattern.
 - Overhauled `faq.html` with new general questions detailing the DJAY.ca ecosystem.
