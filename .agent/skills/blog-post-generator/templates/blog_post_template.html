@@ -1,0 +1,50 @@
+<!-- 
+SEARCH DESCRIPTION: {{SEARCH_DESCRIPTION}}
+LABELS: {{LABELS}}
+-->
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+
+<h2 style="text-align: left;">{{TITLE}}</h2>
+
+<p>{{OPENING_PARAGRAPH}}</p>
+
+<br />
+
+<h3>Major Highlights / Updates</h3>
+
+<p>{{HIGHLIGHTS_INTRO}}</p>
+<ul style="margin-left: 20px;">
+    {{#each HIGHLIGHTS}}
+    <li><strong>{{this.name}}</strong>: {{this.description}}</li>
+    {{/each}}
+</ul>
+
+<div style="text-align: center; margin: 20px 0;">
+    <i>({{IMAGE_CAPTION}})</i>
+</div>
+
+<br />
+
+<h3>Technical Deep Dive</h3>
+
+<p>{{TECHNICAL_DETAIL_INTRO}}</p>
+<ul style="margin-left: 20px;">
+    {{#each TECHNICAL_DETAILS}}
+    <li><strong>{{this.name}}</strong>: {{this.description}}</li>
+    {{/each}}
+</ul>
+
+<br />
+
+<h3>Looking Ahead</h3>
+
+<p>{{FUTURE_PLANS}}</p>
+
+<p>Try it out at <a href="{{APP_URL}}" target="_blank">{{APP_DISPLAY_URL}}</a>.</p>
+
+<p>Until next time!</p>
+
+<p><em>— Jason Brain</em></p>
+
+</div>

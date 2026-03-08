@@ -7,11 +7,11 @@
     <title><data:view.title.escaped/></title>
         <!-- Template Metadata -->
     <b:template-skin>
-        <b:variable default='DJAY.ca Professional Blogger Template' name='templateName' type='string'/>
-        <b:variable default='A modern, integrated template for the DJAY.ca ecosystem with glassmorphism and synchronized navigation' name='templateDescription' type='string'/>
+        <b:variable default='DJAY.ca Professional DJ Template' name='templateName' type='string'/>
+        <b:variable default='A modern, animated template for DJ and music services with gradient design and smooth animations' name='templateDescription' type='string'/>
         <b:variable default='https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhOonLiSpOEiJ1MeP0wfQZiCrH7ugiqe2zJ2l0kW4qdz4djt7HJDbaL5S1ZumpFy25X1eLY7ixYlhZclFvF7FC1RX8ieB1S3FmVjfHvATpus1GH6L5og2clOdhojWCxUJkU4vwN5bdTH72FFC4unbj4Mh0DfUh6wJUL4bqitfvkGlK6NyEMh-GpAcF_BIEL/s1600/capture.jpg' name='templateThumbnail' type='string'/>
-        <b:variable default='1.1.0' name='templateVersion' type='string'/>
-        <b:variable default='DJAY.ca / Brain AV' name='templateAuthor' type='string'/>
+        <b:variable default='1.0.0' name='templateVersion' type='string'/>
+        <b:variable default='DJAY.ca' name='templateAuthor' type='string'/>
     </b:template-skin>
     <b:skin><![CDATA[
         /* Reset and Base Styles */
@@ -88,7 +88,7 @@
             margin: 0 auto;
         }
 
-        .logo a {
+        .blog-title {
             font-size: 1.8rem;
             font-weight: 800;
             background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
@@ -98,34 +98,16 @@
             text-decoration: none;
         }
 
-        .logo:hover {
+        .blog-title:hover {
             transform: scale(1.05);
             transition: all 0.3s ease;
-        }
-
-        /* Hamburger Menu */
-        .hamburger {
-            display: none;
-            flex-direction: column;
-            gap: 5px;
-            cursor: pointer;
-            padding: 5px;
-        }
-
-        .hamburger span {
-            display: block;
-            width: 25px;
-            height: 3px;
-            background: white;
-            border-radius: 3px;
-            transition: 0.3s;
         }
 
         /* Navigation */
         .nav-menu {
             display: flex;
             list-style: none;
-            gap: 0rem;
+            gap: 2rem;
             align-items: center;
         }
 
@@ -134,30 +116,13 @@
             text-decoration: none;
             font-weight: 500;
             transition: all 0.3s ease;
-            padding: 0.6rem 1rem;
+            padding: 0.5rem 1rem;
             border-radius: 8px;
-            display: block;
         }
 
         .nav-menu a:hover {
-            background: rgba(255, 255, 255, 0.05);
+            background: rgba(255, 255, 255, 0.1);
             transform: translateY(-2px);
-            border: 1px solid rgba(255, 255, 255, 0.05);
-        }
-
-        .cta-nav-button {
-            background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
-            color: #ffffff !important;
-            padding: 10px 20px !important;
-            border-radius: 50px !important;
-            font-weight: 700 !important;
-            margin-left: 10px;
-            box-shadow: 0 4px 15px rgba(255, 107, 107, 0.3);
-        }
-
-        .cta-nav-button:hover {
-            transform: translateY(-2px) scale(1.05) !important;
-            box-shadow: 0 8px 25px rgba(255, 107, 107, 0.4);
         }
 
         /* Main Content */
@@ -278,19 +243,20 @@
             box-shadow: 0 15px 40px rgba(0, 0, 0, 0.3);
         }
 
-        .post-title a {
-            color: #ffffff; /* Fallback */
+        .post-title {
+            font-size: 2.2rem;
+            margin-bottom: 1rem;
             background: linear-gradient(135deg, #ff6b6b, #4ecdc4);
             -webkit-background-clip: text;
             -webkit-text-fill-color: transparent;
             background-clip: text;
-            text-decoration: none;
-            display: inline-block;
+            position: relative;
+            z-index: 1;
         }
 
-        .post-title a:hover {
-            opacity: 0.8;
-            text-shadow: 0 0 10px rgba(78, 205, 196, 0.3);
+        .post-title a {
+            color: inherit;
+            text-decoration: none;
         }
 
         .post-content {
@@ -463,17 +429,13 @@
             }
             
             .nav-menu {
-                display: none;
-            }
-
-            .hamburger {
-                display: flex;
+                flex-direction: column;
+                gap: 0.5rem;
             }
             
             .header-inner {
-                flex-direction: row;
-                justify-content: space-between;
-                width: 100%;
+                flex-direction: column;
+                gap: 1rem;
             }
         }
 
@@ -522,31 +484,30 @@
 </head>
 
 <body>
+
+  
     <!-- Animated background particles -->
     <div class='bg-animation' id='bgAnimation'/>
 
     <!-- Header -->
     <header class='header-wrapper'>
-            <div class='logo'>
-                <a href='https://djay.ca/'>DJAY.ca</a>
-            </div>
+        <div class='header-inner'>
+            <h1 class='blog-title'>
+                <a href='https://djay.ca/'>
+                    <data:blog.title/>
+                </a>
+            </h1>
             <nav>
                 <ul class='nav-menu'>
-            <li><a href='https://radio.djay.ca' style='color: #4ecdc4; font-weight: bold;' target='_blank'>Live Radio</a></li>
             <li><a href='https://djay.ca/index.html#products'>Products</a></li>
             <li><a href='https://djay.ca/about.html'>About</a></li>
-            <li><a href='https://djay.ca/contact.html'>Contact</a></li>
+            <li><a href='chttps://djay.ca/ontact.html'>Contact</a></li>
             <li><a href='https://djay.ca/faq.html'>FAQ</a></li>
             <li><a href='https://blog.djay.ca/'>Blog</a></li>
-            <li><a href='https://djay.ca/waitlist.html'>Join Waitlist</a></li>
-            <li><a class='cta-nav-button' href='https://djay.ca/booking.html'>Book a DJ</a></li>
+            <li><a class='cta-button' href='https://djay.ca/booking.html'>Book a DJ</a></li>
                 </ul>
-                <div class='hamburger'>
-                    <span/>
-                    <span/>
-                    <span/>
-                </div>
             </nav>
+        </div>
     </header>
 
     <!-- Main Content -->
@@ -554,9 +515,9 @@
         <!-- Hero Section (only on homepage) -->
         <b:if cond='data:view.isHomepage'>
             <section class='hero-section'>
-                <h1 class='hero-title'>Makers of Innovative Audio Software</h1>
+                <h1 class='hero-title'>DJAY BLOG</h1>
                 <p class='hero-description'>
-                    DJAY.ca is a premier destination for global internet radio and professional browser-based audio tools like DJ MixKit.
+                    We build creative and accessible audio tools for musicians, DJs, and producers. Experience the future of browser-based DJ software.
                 </p>
             </section>
         </b:if>
@@ -1038,9 +999,11 @@
       box-shadow: 1px 1px 3px 1px rgba(0, 0, 0, 0.2);
     }
 
-    .post-body a.b-tooltip-container:hover .b-tooltip {
-      visibility: visible;
-      opacity: 1;
+    @media (hover: hover) {
+      .post-body a.b-tooltip-container:hover .b-tooltip {
+        visibility: visible;
+        opacity: 1;
+      }
     }
   </style>
   <!-- LINT.ThenChange(//depot/google3/java/com/google/blogger/b2/layouts/widgets/v2-style.css) -->
@@ -1305,6 +1268,203 @@
   </ul>
 </b:includable>
                   </b:widget>
+                  <b:widget id='ReportAbuse1' locked='false' title='' type='ReportAbuse' visible='true'>
+                    <b:includable id='main'>
+  <b:include name='reportAbuse'/>
+</b:includable>
+                  </b:widget>
+                  <b:widget id='Header1' locked='false' title='DJAY.ca (Header)' type='Header' visible='true'>
+                    <b:widget-settings>
+                      <b:widget-setting name='displayUrl'/>
+                      <b:widget-setting name='displayHeight'>0</b:widget-setting>
+                      <b:widget-setting name='sectionWidth'>-1</b:widget-setting>
+                      <b:widget-setting name='useImage'>false</b:widget-setting>
+                      <b:widget-setting name='shrinkToFit'>false</b:widget-setting>
+                      <b:widget-setting name='imagePlacement'>BEHIND</b:widget-setting>
+                      <b:widget-setting name='displayWidth'>0</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main' var='this'>
+    <div class='header-widget'>
+      <b:include cond='data:imagePlacement in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='image'/>
+      <b:include cond='data:imagePlacement not in {&quot;REPLACE&quot;, &quot;BEFORE_DESCRIPTION&quot;}' name='title'/>
+      <b:include cond='data:imagePlacement != &quot;REPLACE&quot;' name='description'/>
+    </div>
+    <b:include cond='data:imagePlacement == &quot;BEHIND&quot;' name='behindImageStyle'/>
+  </b:includable>
+                    <b:includable id='behindImageStyle'>
+    <b:if cond='data:sourceUrl'>
+      <b:include cond='data:this.image' data='{                    image: data:this.image,                    selector: &quot;.header-widget&quot;                  }' name='responsiveImageStyle'/>
+      <style type='text/css'>
+        .header-widget {
+          background-position: <data:blog.locale.languageAlignment/>;
+          background-repeat: no-repeat;
+          background-size: cover;
+        }
+      </style>
+    </b:if>
+  </b:includable>
+                    <b:includable id='description'>
+    <p>
+      <data:this.description/>
+    </p>
+  </b:includable>
+                    <b:includable id='image'>
+    <a class='header-image-wrapper' expr:href='data:blog.homepageUrl'>
+      <b:include data='{                                                 image: data:image,                                                 altText: data:blog.title.escaped,                                                 originalWidth: data:width,                                                 originalHeight: data:height                                               }' name='responsiveImage'/>
+    </a>
+  </b:includable>
+                    <b:includable id='title'>
+    <h1>
+      <b:tag cond='data:view.url != data:blog.homepageUrl' expr:href='data:blog.homepageUrl' name='a'>
+        <data:title/>
+      </b:tag>
+    </h1>
+  </b:includable>
+                  </b:widget>
+                  <b:widget cond='!data:view.isPost' id='PageList1' locked='false' title='' type='PageList' visible='false'>
+                    <b:widget-settings>
+                      <b:widget-setting name='pageListJson'><![CDATA[{"home":{"href":"http://blog.djay.ca/","position":0,"title":"Home"}}]]></b:widget-setting>
+                      <b:widget-setting name='homeTitle'>Home</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+                    <b:includable id='content'>
+  <div class='widget-content'>
+    <b:include name='pageList'/>
+  </div>
+</b:includable>
+                    <b:includable id='overflowButton'>
+  <b:include name='verticalMoreIcon'/>
+</b:includable>
+                    <b:includable id='overflowablePageList'>
+  <div class='overflowable-container'>
+    <div class='overflowable-contents'>
+      <div class='container'>
+        <b:with value='true' var='overflow'>
+        <b:with value='&quot;tabs&quot;' var='pageListClass'>
+          <b:include name='pageList'/>
+        </b:with>
+        </b:with>
+      </div>
+    </div>
+    <div class='overflow-button hidden'>
+      <b:include name='overflowButton'/>
+    </div>
+  </div>
+</b:includable>
+                    <b:includable id='pageLink'>
+  <li>
+    <b:class cond='data:overflow' name='overflowable-item'/>
+    <b:class cond='data:link.isCurrentPage' name='selected'/>
+
+    <a expr:href='data:link.href'><data:link.title/></a>
+  </li>
+</b:includable>
+                    <b:includable id='pageList'>
+  <ul>
+    <b:class cond='data:pageListClass' expr:name='data:pageListClass'/>
+    <b:loop values='data:links' var='link'>
+      <b:include name='pageLink'/>
+    </b:loop>
+  </ul>
+</b:includable>
+                  </b:widget>
+                  <b:widget id='BlogSearch1' locked='false' title='Search This Blog' type='BlogSearch' visible='true'>
+                    <b:includable id='main'>
+  <b:include name='widget-title'/>
+  <b:include name='content'/>
+</b:includable>
+                    <b:includable id='content'>
+  <div class='widget-content' role='search'>
+    <b:include name='searchForm'/>
+  </div>
+</b:includable>
+                    <b:includable id='searchForm'>
+  <form expr:action='data:blog.searchUrl'>
+    <b:attr cond='not data:view.isPreview' name='target' value='_top'/>
+    <b:include name='urlParamsAsFormInput'/>
+    <div class='search-input'>
+      <input autocomplete='off' expr:aria-label='data:messages.searchThisBlog' expr:placeholder='data:messages.searchThisBlog' expr:value='data:view.isSearch ? data:view.search.query.escaped : &quot;&quot;' name='q'/>
+    </div>
+    <b:include name='searchSubmit'/>
+  </form>
+</b:includable>
+                    <b:includable id='searchSubmit'>
+  <input class='search-action' expr:value='data:messages.search.escaped' type='submit'/>
+</b:includable>
+                  </b:widget>
+                  <b:widget id='AdSense1' locked='false' title='' type='AdSense' visible='true'>
+                    <b:includable id='main'>
+  <div class='widget-content'>
+    <b:if cond='data:adCode'>
+      <data:adCode/>
+    <b:else/>
+      <b:include name='defaultAdUnit'/>
+    </b:if>
+  </div>
+</b:includable>
+                  </b:widget>
+                  <b:widget id='AdSense2' locked='false' title='' type='AdSense' visible='true'>
+                    <b:includable id='main'>
+  <div class='widget-content'>
+    <b:if cond='data:adCode'>
+      <data:adCode/>
+    <b:else/>
+      <b:include name='defaultAdUnit'/>
+    </b:if>
+  </div>
+</b:includable>
+                  </b:widget>
+                  <b:widget id='Attribution1' locked='false' title='' type='Attribution' visible='true'>
+                    <b:widget-settings>
+                      <b:widget-setting name='copyright'/>
+                    </b:widget-settings>
+                    <b:includable id='main' var='this'>
+  <div class='widget-content'>
+    <div class='blogger'>
+      <a expr:href='data:bloggerUrl' rel='nofollow'>
+        <b:include name='flatBloggerIcon'/>
+        <b:message name='messages.poweredByBlogger'/>
+      </a>
+    </div>
+
+    <b:if cond='data:imageAuthor'>
+      <div class='image-attribution'>
+        <b:if cond='data:imageAuthor.url'>
+          <b:message name='messages.templateImagesByLink'>
+            <b:param expr:value='data:imageAuthor.url'/>
+            <b:param expr:value='data:imageAuthor.name'/>
+          </b:message>
+        <b:else/>
+          <b:message name='messages.templateImagesBy'>
+            <b:param expr:value='data:imageAuthor.name'/>
+          </b:message>
+        </b:if>
+      </div>
+    </b:if>
+
+    <b:if cond='data:copyright != &quot;&quot;'>
+      <div class='copyright'><data:copyright/></div>
+    </b:if>
+  </div>
+</b:includable>
+                  </b:widget>
+                  <b:widget cond='data:view.isHomepage' id='FeaturedPost1' locked='false' title='' type='FeaturedPost' visible='true'>
+                    <b:widget-settings>
+                      <b:widget-setting name='showSnippet'>true</b:widget-setting>
+                      <b:widget-setting name='showPostTitle'>true</b:widget-setting>
+                      <b:widget-setting name='showFirstImage'>true</b:widget-setting>
+                      <b:widget-setting name='useMostRecentPost'>true</b:widget-setting>
+                    </b:widget-settings>
+                    <b:includable id='main' var='this'>
+  <b:include name='widget-title'/>
+  <div class='widget-content'>
+    <b:include name='snippetedPosts'/>
+  </div>
+</b:includable>
+                  </b:widget>
                 </b:section>
             </aside>
         </div>
@@ -1312,18 +1472,11 @@
 
     <!-- Footer -->
     <footer class='footer-wrapper'>
-        <p>&#169; 2026 DJAY.ca. All Rights Reserved.</p>
-        <p style='font-size: 0.9em; margin-top: 5px; opacity: 0.8;'>A project by <a href='https://brainav.ca' target='_blank'>Brain AV</a></p>
+        <p>&#169; 2024 <data:blog.title/>. All rights reserved.</p>
         <p>
-            <a href='https://djay.ca/about.html'>About Us</a> |
-            <a href='https://djay.ca/booking.html'>Book a DJ</a> |
-            <a href='https://djay.ca/contact.html'>Contact Us</a> |
-            <a href='https://djay.ca/privacy.html'>Privacy Policy</a> |
-            <a href='https://djay.ca/terms.html'>Terms of Service</a> |
-            <a href='https://blog.djay.ca/'>Blog</a>
-        </p>
-        <p style='font-size: 0.75rem; margin-top: 15px; opacity: 0.6; max-width: 600px; margin-left: auto; margin-right: auto;'>
-            *DJAY.ca is an independent project and is not affiliated with, endorsed by, or associated in any way with Algoriddim GmbH or their software <i>djay</i>.
+            <a href='#'>Privacy Policy</a> |
+            <a href='#'>Terms of Service</a> |
+            <a href='#'>Contact</a>
         </p>
     </footer>
 
@@ -1353,30 +1506,6 @@
         // Create initial particles
         for (var i = 0; i < 20; i++) {
             setTimeout(createParticle, i * 100);
-        }
-          // Mobile menu toggle
-        var hamburger = document.querySelector('.hamburger');
-        var navMenu = document.querySelector('.nav-menu');
-        
-        if (hamburger && navMenu) {
-            hamburger.addEventListener('click', function() {
-                this.classList.toggle('active');
-                if (navMenu.style.display === 'flex') {
-                    navMenu.style.display = 'none';
-                } else {
-                    navMenu.style.display = 'flex';
-                    navMenu.style.flexDirection = 'column';
-                    navMenu.style.position = 'absolute';
-                    navMenu.style.top = '100%';
-                    navMenu.style.left = '0';
-                    navMenu.style.width = '100%';
-                    navMenu.style.backgroundColor = 'rgba(10, 10, 10, 0.95)';
-                    navMenu.style.padding = '1rem';
-                    navMenu.style.gap = '1rem';
-                    navMenu.style.boxShadow = '0 10px 30px rgba(0, 0, 0, 0.5)';
-                    navMenu.style.zIndex = '1000';
-                }
-            });
         }
     //]]>
     </script>
