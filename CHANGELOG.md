@@ -15,6 +15,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Elevated the navigation menu UI (`includes/header.html`) by introducing a soft scroll shadow to the header, sub-glassmorphism hover states for nav links, and a sliding fade-in animation for the mobile hamburger menu in `style.css`.
 - Refactored `script.js` to include a global `MutationObserver` that automatically parses the URL and apples an `.active` CSS state to navigation links once the header is fetched dynamically, while patching mobile menu initializations.
 - Built a premium CSS framework for the `booking.html` page, specifically adding `margin` and `padding` to `.featured-dj` and introducing a beautifully responsive `.djs-grid`.
+- Injected a dynamic **Latest News** `.blog-grid` section into `index.html` using a JSONP callback in `script.js` to asynchronously parse natively formatted Blogger RSS data (bypassing CORS restrictions on `blog.djay.ca`).
 - Designed a custom hovering card aesthetic for individual DJs (`.dj-card` and `.dj-avatar`) with gradient interactions and structural matching to the site's glassmorphism style.
 - Built a premium `.faq-section` and `.faq-item` CSS framework in `style.css` featuring glassmorphism and animated sliding gradients on hover.
 - Rebuilt the FAQ section on `mixkit.html` to utilize this new premium design pattern.
