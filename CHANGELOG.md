@@ -5,7 +5,10 @@ All notable changes to the DJAY.ca landing page and ecosystem will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.0.2] - 2026-03-08
+### Changed
+- Updated the MixKit product presence across the site to reflect the **v0.2.0** release.
+- Overhauled feature highlights on `index.html` and `mixkit.html` to showcase new v0.2.0 capabilities, including GPU-accelerated WebGL visuals, precision mixing (stutter-cueing/pitch bend), and persistent user settings.
 
 ## [1.0.1] - 2026-03-08
 ### Fixed
