@@ -1,6 +1,7 @@
 # 🎵 DJAY.ca
 
 **Makers of Innovative Audio Software**
+*A standalone sub-brand of [Brain AV](https://brainav.ca)*
 
 Welcome to DJAY.ca - where we build creative and accessible audio tools for musicians, DJs, and producers. Experience the future of browser-based DJ software.
 
@@ -51,9 +52,9 @@ Runs entirely in your browser. Works offline. No downloads, no setup, no hassle.
 
 ---
 
-## 👨‍💻 About DJAY.ca
+## 👨‍💻 About DJAY.ca (A Brain AV Project)
 
-DJAY.ca was founded by **Jason Brain**, a Canadian DJ with **30 years of experience** behind the decks. With a day job in computer programming and project management, Jason combined his passions to create a new generation of audio tools for fellow music lovers.
+DJAY.ca was founded by **Jason Brain** under the [Brain AV](https://github.com/orgs/BrainAV/) organization. Jason is a Canadian DJ with **30 years of experience** behind the decks. With a day job in computer programming and project management, Jason combined his passions to create a new generation of audio tools for fellow music lovers.
 
 ### 🎯 Our Mission
 To build powerful, accessible, and fun software for musicians, DJs, and producers. We believe that high-quality tools should be available to everyone, which is why we focus on browser-based applications that work on any device.

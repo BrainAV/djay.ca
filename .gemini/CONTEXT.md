@@ -1,7 +1,7 @@
 # 🎵 DJAY.ca - Project Context
 
 ## Overview
-DJAY.ca is the central hub and portal for all audio software and DJ services created by the BrainAV organization. The site is evolving to become a comprehensive platform that not only provides professional DJ tools but also serves as a premier destination for discovering and listening to internet radio—positioning itself as a modern alternative to platforms like TuneIn.
+DJAY.ca is a standalone sub-brand and the central hub for all audio software and DJ services created by the [BrainAV organization](https://github.com/orgs/BrainAV/). The site is evolving to maintain its distinct identity as a comprehensive platform that not only provides professional DJ tools but also serves as a premier destination for discovering and listening to internet radio—positioning itself as a modern alternative to platforms like TuneIn, while still functioning under the broader BrainAV tech umbrella.
 
 ## Product Ecosystem
 1. **Radio Stream Player (`radio.djay.ca`)**: A sleek, web-based radio player. Supports custom stations, dynamic visualizations, and secure HTTP-to-HTTPS proxying via Cloudflare Workers.

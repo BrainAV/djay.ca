@@ -1,0 +1,57 @@
+<div dir="ltr" style="text-align: left;" trbidi="on">
+
+<h2 style="text-align: left;">The Evolution of the DJAY.ca Radio Stream Player</h2>
+
+<p>Welcome to the very first post on the official DJAY.ca blog! It’s been an incredible few weeks of development, and I wanted to take a moment to pull back the curtain on our most mature project to date: the <strong>Radio Stream Player</strong>.</p>
+
+<p>What started as a simple experiment to see if we could pipe an internet radio stream through a web browser has rapidly evolved into a feature-rich, standalone web application. If you haven't checked it out yet, you can launch it right from our homepage or visit <a href="https://radio.djay.ca" target="_blank">radio.djay.ca</a> directly.</p>
+
+<br />
+
+<h3>From Basic Playback to Dynamic Visualization</h3>
+
+<p>The earliest version of the player (v1.0) was admittedly barebones. It had a play button, a volume slider, and a hardcoded list of my favorite electronic music streams. But the vision was always to build something that felt like a premium application, not just a static webpage.</p>
+
+<p>We've since completely overhauled the aesthetic, adopting a modern "Glassmorphism" (frosted glass) design. But the real magic happened when we tied into the browser's Web Audio API. </p>
+
+<p>Now, instead of just listening to the music, you can <em>see</em> it. We implemented a dynamic Stereo VU Meter that reacts in real-time to the audio frequencies of the live stream. With the click of a button, you can cycle through different visualizer styles, turning your browser window into a mesmerizing music companion.</p>
+
+<div style="text-align: center; margin: 20px 0;">
+    <i>(Preview of the new Glassmorphism design and VU Meter)</i>
+</div>
+
+<br />
+
+<h3>Breaking the "Mixed Content" Barrier</h3>
+
+<p>One of the biggest technical challenges we faced was the age-old problem of "Mixed Content" warnings. Many old-school internet radio stations still broadcast over insecure HTTP connections. Modern browsers outright block these streams if your website is hosted securely on HTTPS (which DJAY.ca is).</p>
+
+<p>Instead of forcing users to allow unsafe scripts, we built a custom backend proxy using <strong>Cloudflare Workers</strong>. This edge network seamlessly intercepts insecure streams, wraps them in HTTPS, and delivers them safely to your browser. It was a massive win for user experience and stream stability.</p>
+
+<br />
+
+<h3>Live Metadata and Personalization</h3>
+
+<p>Of course, a radio player isn't complete unless you know what you're listening to! Recent updates have tapped into the Cloudflare proxy to extract ICY metadata directly from the stream headers.</p>
+
+<p><strong>What does that mean for you?</strong></p>
+<ul style="margin-left: 20px;">
+    <li>A scrolling marquee now displays the current Song and Artist in real-time.</li>
+    <li>We’ve integrated with the MediaSession API, meaning you can control playback and see track info directly on your phone's lock screen or your computer's media controls.</li>
+</ul>
+
+<p>We've also opened up the platform to personalization. You can now search for and add your own custom radio URLs via the integrated Radio-Browser.info directory, save them to your favorites, and even set a custom background image URL to make the player your own.</p>
+
+<br />
+
+<h3>What's Next?</h3>
+
+<p>We are currently sitting at version 1.4.0, and the codebase is stronger than ever thanks to a recent architectural refactor handling state management.</p>
+
+<p>As we look to the horizon, our focus is starting to shift toward monetization via Google AdSense, and potentially building an embedded version of the player that you can use while browsing the rest of the DJAY.ca toolset.</p>
+
+<p>Until then, keep the music playing!</p>
+
+<p><em>— Jason Brain</em></p>
+
+</div>
