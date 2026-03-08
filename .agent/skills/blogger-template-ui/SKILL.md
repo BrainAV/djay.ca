@@ -9,6 +9,9 @@ This skill outlines how to ensure the external Blogger site (`blog.djay.ca`) fee
 ## Objective
 To preserve the "Glassmorphism" design aesthetic, color palettes, and animation sequences established on `djay.ca` across the Blogger ecosystem, preventing a jarring visual jump for users navigating between the main site and the blog.
 
+**Reference File:**
+When beginning the work to rebuild or update the template, use `extras/theme-djay blogger.xml` as the foundational reference file. It contains the initial theme structure built for Blogger.
+
 ## Guidelines
 
 ### 1. Structural Parity
