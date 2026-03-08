@@ -6,13 +6,13 @@ This document outlines the strategic vision and future additions for the DJAY.ca
 
 ## 🎯 Short-Term Goals
 
-- **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently v1.4.0).
-- **DJ MixKit Development:** Prepare for upcoming development sessions focused on launching and improving the DJ MixKit web application.
+- [x] **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently v1.4.0).
+- [ ] **DJ MixKit Development:** Prepare for upcoming development sessions focused on launching and improving the DJ MixKit web application.
 - **AdSense Approval Preparation (Content & Quality Audit):**
-  - **Blog Integration:** Embed the latest posts from `blog.djay.ca` onto the landing page to provide fresh, text-rich content.
-  - **Dedicated Product Pages:** Create standalone pages for the Radio Stream Player and DJ MixKit (`/radio-player.html`, `/mixkit.html`) with 500-800 words detailing their history, technical stack (Cloudflare routing, Web Audio API), tutorials, and use-cases to eliminate "thin content" risks.
-  - **FAQ Expansion:** Expand the `faq.html` page to include robust, multi-paragraph answers to increase organic word count and keyword density.
-  - **Mobile Layout Audit:** Conduct a strict mobile-first audit ensuring zero overlapping elements, no horizontal scrolling, and perfect legibility to meet AdSense mobile review standards.
+  - [x] **Blog Integration:** Embed the latest posts from `blog.djay.ca` onto the landing page to provide fresh, text-rich content.
+  - [x] **Dedicated Product Pages:** Create standalone pages for the Radio Stream Player and DJ MixKit (`/radio-player.html`, `/mixkit.html`) with 500-800 words detailing their history, technical stack (Cloudflare routing, Web Audio API), tutorials, and use-cases to eliminate "thin content" risks.
+  - [x] **FAQ Expansion:** Expand the `faq.html` page to include robust, multi-paragraph answers to increase organic word count and keyword density.
+  - [ ] **Mobile Layout Audit:** Conduct a strict mobile-first audit ensuring zero overlapping elements, no horizontal scrolling, and perfect legibility to meet AdSense mobile review standards.
 
 ---
 
