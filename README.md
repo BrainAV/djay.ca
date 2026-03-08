@@ -7,48 +7,25 @@ Welcome to DJAY.ca - where we build creative and accessible audio tools for musi
 
 ---
 
-## 🚀 Featured Product: **DJ MixKit**
+## 🚀 Featured Products
 
+### 📻 **[Radio Stream Player](https://radio.djay.ca)**
+*A beautiful, highly customizable internet radio portal. Listen to curated global streams or add your own ad-free.*
+- **Custom Stations:** Add your own HTTP/HTTPS stream URLs.
+- **Live Metadata Integration:** Real-time track and artist info synced to your OS lock screen.
+- **Web Audio Visualizers:** Beautiful, hardware-accelerated audio visualization canvas.
+- **Secure Edge Proxy:** Natively bypass restrictive browser "Mixed Content" warnings.
+
+### 🎛️ **[DJ MixKit](https://mixkit.djay.ca)**
 *The most advanced browser-based DJ software. No installation required. Fully functional offline.*
-
-### 🎛️ Available Versions
-
-- **[DJ MixKit (Basic Concept Demo)](https://mixkit.djay.ca)** - Launch now and start mixing!
-- **DJ MixKit (Beta v0.2)** - Coming Soon with advanced features
+- **Dual Decks:** Two independent decks with professional-grade controls for seamless track mixing.
+- **Advanced Controls:** Tempo control, key lock, and more. All the tools professionals need.
+- **Zero Installation:** Runs entirely in your browser without plugins, making it perfect for gigging without internet.
 
 ---
 
-## ✨ Features
-
-### 🎚️ **Dual Decks**
-Two independent decks with professional-grade controls for seamless track mixing and live performance.
-
-### ⚡ **Advanced Controls**
-Tempo control, key lock, and more. All the basic tools professionals need.
-
-### 🎛️ **Effects & Mixer**
-Professional crossfader and Stereo VU Meter level display.
-
-### 🌐 **No Installation**
-Runs entirely in your browser. Works offline. No downloads, no setup, no hassle.
-
----
-
-## 🎯 Getting Started with DJ MixKit
-
-1. **🎵 Load Your Music**
-   - Drag and drop your audio files onto a deck
-   - Or use the browse button to select tracks from your device
-
-2. **🎧 Mix and Play**
-   - Use the intuitive controls to mix, sync, and manipulate your tracks like a professional DJ
-
-3. **🎨 Create Your Sound**
-   - Add effects, adjust tempo, and use the crossfader to create seamless transitions between tracks
-
-4. **💾 Save Your Session**
-   - Export your mix and settings to continue later
-   - Your creative flow never has to stop
+## 📰 Latest News
+Stay up to date with the newest releases, DJ tips, and industry insights from our blog at [blog.djay.ca](https://blog.djay.ca). We are actively syncing our Blogger template UI to match the main site for a seamless reading experience!
 
 ---
 
