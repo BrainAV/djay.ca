@@ -6,10 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.0.0] - 2026-03-08
 ### Added
 - Created dedicated standalone product pages (`mixkit.html` and `radio-player.html`) to improve SEO content density.
 - Migrated specific product FAQs from the main `faq.html` page to their respective new product pages.
 - Defined two new Agent Skills (`db-integration-manager` and `auth-manager`) to establish architecture rules for future backend updates (supporting both cPanel/MySQL and modern Serverless stacks).
+- Initial creation of the DJAY.ca landing page.
+- "Glassmorphism" design aesthetic and responsive layout.
+- Sections for Radio Stream Player and DJ MixKit.
+- "Building the Future" teaser section for upcoming Late 2026 apps.
+- Essential legal pages: `privacy.html`, `terms.html`, and `about.html`.
+- Agent skill architecture (`ui-consistency`, `seo-adsense-auditor`, `a11y-auditor`) to govern future AI-assisted development.
+- Dedicated `ROADMAP.md` tracking monetization and embedded player goals.
+- Explicit "Brain AV" sub-branding across the `README.md`, `.gemini/CONTEXT.md`, and a new attribution link in the global site footer.
 
 ### Changed
 - Elevated the navigation menu UI (`includes/header.html`) by introducing a soft scroll shadow to the header, sub-glassmorphism hover states for nav links, and a sliding fade-in animation for the mobile hamburger menu in `style.css`.
@@ -23,14 +33,3 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Improved the layout structure of the new standalone product pages (`mixkit.html` and `radio-player.html`) to ensure they match the full-width, high-quality glassmorphism aesthetic of the main `index.html` page.
 - Updated the `.agent/skills/ui-consistency/SKILL.md` rules to explicitly dictate FAQ structuring and when to use `.content-page` wrappers versus full-width section patterns.
 - Updated the main `index.html` to link 'Learn More' buttons to the new standalone product pages instead of relying entirely on external application links.
-
-## [1.0.0] - 2026-03-07
-### Added
-- Initial creation of the DJAY.ca landing page.
-- "Glassmorphism" design aesthetic and responsive layout.
-- Sections for Radio Stream Player and DJ MixKit.
-- "Building the Future" teaser section for upcoming Late 2026 apps.
-- Essential legal pages: `privacy.html`, `terms.html`, and `about.html`.
-- Agent skill architecture (`ui-consistency`, `seo-adsense-auditor`, `a11y-auditor`) to govern future AI-assisted development.
-- Dedicated `ROADMAP.md` tracking monetization and embedded player goals.
-- Explicit "Brain AV" sub-branding across the `README.md`, `.gemini/CONTEXT.md`, and a new attribution link in the global site footer.
