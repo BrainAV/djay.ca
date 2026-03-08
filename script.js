@@ -361,20 +361,12 @@ document.addEventListener('DOMContentLoaded', () => {
     observer.observe(headerPlaceholder, { childList: true, subtree: true });
 });
 
-// Blogger JSON Feed Integration
-async function fetchBlogPosts() {
+// Blogger JSONP Feed Integration
+function handleBloggerFeed(data) {
     const blogContainer = document.getElementById('blog-container');
     if (!blogContainer) return;
 
     try {
-        // Fetch Blogger feed formatted as JSON
-        const response = await fetch('https://blog.djay.ca/feeds/posts/default?alt=json');
-        
-        if (!response.ok) {
-            throw new Error(`HTTP error! status: ${response.status}`);
-        }
-        
-        const data = await response.json();
         const entries = data.feed.entry || [];
         
         blogContainer.innerHTML = ''; // Clear loading message
@@ -433,6 +425,12 @@ async function fetchBlogPosts() {
     }
 }
 
-// Initialize the blog fetch when the DOM loads
-document.addEventListener('DOMContentLoaded', fetchBlogPosts);
+// Initialize the blog JSONP fetch when the DOM loads
+document.addEventListener('DOMContentLoaded', () => {
+    if (document.getElementById('blog-container')) {
+        const script = document.createElement('script');
+        script.src = 'https://blog.djay.ca/feeds/posts/default?alt=json-in-script&callback=handleBloggerFeed';
+        document.body.appendChild(script);
+    }
+});
 
