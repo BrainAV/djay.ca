@@ -19,11 +19,12 @@ This document outlines the strategic vision and future additions for the DJAY.ca
 
 ## 🚀 Mid-Term Goals (Add-ons & Integrations)
 
-- **Embedded Radio Player Component:** 
-  - Build a lightweight add-on version of the Radio-Stream-Player that can be embedded directly into the DJAY.ca navigation bar, sidebar, or footer.
-  - This widget will let visitors instantly tune in to curated streams while browsing the site.
-- **Persistent Audio Experience:**
-  - Implement persistent audio playback across page loads. Whether we use an SPA (Single Page Application) framework, Turbo/Pjax, or pop-out windows, the goal is to prevent audio from stopping when a user navigates from "Home" to "About" or "Services."
+- **Embedded Radio Player Integration:** 
+  - Build a lightweight add-on version specifically for the `Radio-Stream-Player-PHP` project that can be embedded directly into the DJAY.ca navigation bar, sidebar, or footer as an overlay.
+  - This widget will let visitors instantly tune in to curated streams while browsing the site, pulling station data from the PHP backend.
+- **Persistent Audio Experience (Bridge to PHP Player):**
+  - Implement a mechanism (e.g., SPA framework like Turbo/Pjax, or a persistent master iframe) to prevent audio from stopping when a user navigates between the DJAY.ca hub and the embedded radio experience.
+  - Ensure the "current station" state survives page transitions.
 - **Monetization Pipeline:**
   - Introduce visually cohesive placeholder ads on the page, paving the way for full Google AdSense integration.
 

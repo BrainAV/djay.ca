@@ -32,44 +32,63 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="glass-panel shimmer-effect" style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px;">
+            <div class="glass-panel shimmer-effect" style="max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px;">
                 <h1 class="gradient-text">Radio Stream Player</h1>
-                <p>A beautiful, highly customizable internet radio portal. Listen to curated global streams or add your own ad-free. <strong>Now updated to v2.x.x</strong> with user accounts, persistent settings, and a massive global directory.</p>
+                <p>The **Radio Stream Player** is the premier internet radio portal for music lovers who value quality, aesthetics, and privacy. Originally built as a lightweight vanilla JavaScript experiments, it has evolved into a robust v2.0.0 platform featuring deep server-side integration, user accounts, and a secure edge network for high-fidelity streaming.</p>
                 <div class="hero-cta-container">
-                    <a href="https://radio.djay.ca" class="cta-button primary" target="_blank">Launch v2.1.x (Stable)</a>
-                    <a href="https://radio1.djay.ca" class="cta-button secondary" target="_blank">Launch Legacy (v1.4.x)</a>
-                    <a href="https://github.com/BrainAV/Radio-Stream-Player" class="cta-button secondary" target="_blank" style="border: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; padding: 10px 20px;">GitHub Repo</a>
+                    <a href="https://radio.djay.ca" class="cta-button primary" target="_blank">Launch v2.0.0 (Official)</a>
+                    <a href="https://radio1.djay.ca" class="cta-button secondary" target="_blank">Legacy (v1.4.x)</a>
+                    <a href="https://github.com/BrainAV/Radio-Stream-Player-PHP" class="cta-button secondary" target="_blank" style="border: 1px solid rgba(255,255,255,0.1); font-size: 0.9rem; padding: 10px 20px;">Source Code</a>
                 </div>
             </div>
         </section>
 
-        <!-- Technical Features Overview -->
-        <section id="features" style="padding-top: 2rem;">
+        <!-- The v2.0 Platform Deep-Dive -->
+        <section class="content-section glass-panel" style="margin-top: 2rem; padding: 3rem;">
+            <h2 class="gradient-text">The v2.0.0 Architectural Evolution</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3>🚀 Full-Stack Transformation</h3>
+                    <p>With the release of **v2.0.0**, the Radio Stream Player moved from a client-side only application to a powerful full-stack solution. By building a **PHP and MySQL backend**, we've shifted the heavy lifting of station management and user state to the server. This transition allows for a faster initial load time and a more reliable experience across different devices and browsers.</p>
+                    <p style="margin-top: 1rem;">This new architecture also introduces a specialized **AJAX-based Authentication system**. Unlike traditional web apps that require a full page refresh to log in (stopping your music in the process), our v2.0 player lets you sign in or out dynamically. Your music stream continues uninterrupted while the UI seamlessly updates to show your personal "Favorites" and account settings.</p>
+                </div>
+                <div>
+                    <h3>🔐 Hybrid Storage & Personalization</h3>
+                    <p>One of the most innovative features of the new platform is the **Hybrid Storage Engine**. For guest users, the player utilizes the browser's `localStorage` to remember volume levels and visualizer styles. However, once you create a free account, the player automatically synchronizes your data with our secure MySQL database.</p>
+                    <p style="margin-top: 1rem;">This means you can start listening on your laptop, mark a new favorite station found in the **Radio Browser API**, and have it instantly available when you log in on your phone later. It’s the convenience of modern streaming platforms without the bloat—optimized for high-performance audio delivery.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Technical Features Grid -->
+        <section id="features" style="padding-top: 4rem;">
+            <h2 class="gradient-text" style="text-align: center; margin-bottom: 2rem;">Premium Engineering Features</h2>
             <div class="feature-grid">
                 <div class="feature-item fade-in delay-1">
                     <h3>📻 Global Directory</h3>
-                    <p>Access over 30,000 live radio stations natively from the integrated <strong>Radio Browser</strong> API. Search by genre, country, or language and build your ultimate library.</p>
+                    <p>Stop searching for stream URLs manually. Access over **30,000 live radio stations** natively through the integrated **Radio Browser API**. Search by genre (from Psytrance to Jazz), country, or language and add them to your collection with a single click.</p>
                 </div>
                 <div class="feature-item fade-in delay-2">
-                    <h3>🔐 Personal Accounts</h3>
-                    <p>New PHP & MySQL backend integration allows you to create a secure account, sync your favorites across devices, and customize your personal player settings.</p>
+                    <h3>🛰️ Custom Edge Proxy</h3>
+                    <p>Browsers often block "Mixed Content" (HTTP audio streams on an HTTPS site). We solve this with a custom **Cloudflare Workers edge network proxy**. This worker securely wraps standard HTTP streams into high-speed HTTPS tunnels, ensuring your music never stops due to security warnings.</p>
                 </div>
                 <div class="feature-item fade-in delay-3">
                     <h3>📊 Web Audio Visualizers</h3>
-                    <p>Transform your listening experience with beautiful, hardware-accelerated audio visualization. Choose from multiple styles including VU meters, spectrum bars, and neon waves.</p>
+                    <p>Experience your music visually. Our engine uses the **Web Audio API** and hardware-accelerated Canvas rendering to provide real-time spectrum analysis. From "Retro LED" meters to modern "Neon Wave" visualizers, every style is designed for 60fps smoothness.</p>
                 </div>
                 <div class="feature-item fade-in delay-4">
-                    <h3>🛡️ Secure Edge Proxy</h3>
-                    <p>Natively bypass restrictive browser "Mixed Content" warnings. We use a custom Cloudflare Workers edge network proxy to securely wrap standard HTTP radio streams into HTTPS.</p>
+                    <h3>📝 Intelligent Metadata</h3>
+                    <p>The player doesn't just play sound; it communicates with our metadata extraction service to pull real-time track and artist information. This data is synced to the **Media Session API**, allowing you to see what's playing directly on your OS lock screen and use hardware media keys.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Open Source Section -->
-        <section class="content-section glass-panel shimmer-effect" style="margin-top: 4rem; padding: 2rem;">
-            <h2 class="gradient-text">A Multi-Version Evolution</h2>
-            <p>The Radio Stream Player has evolved into a robust web application. While <strong>v2.x.x (Stable)</strong> offers a complete platform with user management and databases, we continue to host <strong>v1.4.x (Legacy)</strong> at <a href="https://radio1.djay.ca" target="_blank" style="color: #4ecdc4;">radio1.djay.ca</a> for those who prefer the lightweight, standalone vanilla experience.</p>
-            <p style="margin-top: 1rem;">Have a feature request or want to contribute new visualizer styles? Head over to our <a href="https://github.com/BrainAV/Radio-Stream-Player" target="_blank" style="color: #4ecdc4;">GitHub Repository</a>.</p>
+        <!-- History & Vision Section -->
+        <section class="content-section glass-panel shimmer-effect" style="margin-top: 4rem; padding: 3rem;">
+            <h2 class="gradient-text">A Brief History of the Project</h2>
+            <p>The Radio Stream Player began as a simple project by **Jason Brain** to provide a cleaner, ad-free alternative to mainstream radio portals. The first version was a single-deck vanilla JS experiment designed to test the limits of the Web Audio API visualizers. As the community grew, so did the requirements for more robust station management and cross-device syncing.</p>
+            <p style="margin-top: 1rem;">In early 2026, the project was split into two distinct branches. The **Legacy v1.4.x** version remains a favorite for developers and minimalist users who want a standalone, zero-backend player. Meanwhile, **v2.0.0 (Official)** represents the future of the DJAY.ca ecosystem—a full-featured music platform built on professional PHP standards and modern UI design principles.</p>
+            <p style="margin-top: 1rem;">We are committed to keeping the core player open-source. You can contribute to the visualizer styles, suggest new global stations, or report bugs via our GitHub repository. Our mission is to build the most accessible and beautiful audio tools for the modern web.</p>
         </section>
 
     </main>

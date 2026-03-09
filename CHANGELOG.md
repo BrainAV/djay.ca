@@ -5,6 +5,11 @@ All notable changes to the DJAY.ca landing page and ecosystem will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
+## [Unreleased]
+### Added
+- Expanded the `radio-player.html` product page with 600+ words of substantive content detailing the v2.0.0 architecture, history, and technical stack (PHP/MySQL/Cloudflare).
+- Integrated new feature highlights for the v2.0.0 "Seamless Accounts" and "AJAX Authentication" on the homepage.
+
 ## [1.0.2] - 2026-03-08
 ### Changed
 - Updated the MixKit product presence across the site to reflect the **v0.2.0** release.
