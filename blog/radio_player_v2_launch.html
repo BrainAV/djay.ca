@@ -1,0 +1,57 @@
+<!-- 
+SEARCH DESCRIPTION: Experience the architectural evolution of Radio Stream Player. v2.0.0 introduces a full PHP/MySQL backend, seamless AJAX login, and cloud-synced favorites—all without stopping the music.
+LABELS: Radio Player, PHP, MySQL, AJAX, Web Audio, Cloudflare, DJAY.ca
+-->
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+
+<h2 style="text-align: left;">Radio Stream Player v2.0.0: The PHP Awakening 🚀</h2>
+
+<p>We are thrilled to announce the official launch of <strong>Radio Stream Player v2.0.0</strong>! This release marks the most significant architectural evolution since the project's inception. We’ve moved far beyond a simple frontend player into a robust, full-stack application designed for performance, persistence, and the ultimate user experience.</p>
+
+<p>The core philosophy of v2.0.0 was simple: <strong>The music must never stop.</strong> Whether you are logging in, updating your profile, or managing your favorites, we’ve engineered every interaction to be non-intrusive and seamless.</p>
+
+<br />
+
+<h3>Major Highlights / Updates</h3>
+
+<p>This update is packed with features designed to bring professional-grade station management to your browser:</p>
+<ul style="margin-left: 20px;">
+    <li><strong>Full PHP & MySQL Backend</strong>: We've officially moved away from local storage dependencies. Your account, preferences, and custom stations are now securely managed in the cloud.</li>
+    <li><strong>"Stay-in-the-Groove" Login</strong>: Our new AJAX-driven authentication system allows you to log in or out via a sleek modal overlay. Best of all? No page reloads are required, ensuring your audio stream remains uninterrupted.</li>
+    <li><strong>Cloud-Synced Favorites</strong>: Access your curated list of global stations from any device. Your favorites are now tied to your unique user account, powered by our new database layer.</li>
+    <li><strong>Refined Social Experience</strong>: A new "Account" management tab within the settings modal makes it easy to keep your profile updated while you listen to the best streams from around the world.</li>
+</ul>
+
+<div class="iframe-container" style="position: relative; overflow: hidden; height: 500px; border-radius: 12px; border: 1px solid rgba(255,255,255,0.1); margin: 30px 0; background: #1a1a1a; box-shadow: 0 10px 30px rgba(0,0,0,0.5);">
+    <iframe src="https://radio.djay.ca" style="position: absolute; top: 0; left: 0; width: 100%; height: 100%; border: none;" allow="autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+</div>
+<div style="text-align: center; margin-bottom: 30px;">
+    <i>(Live Preview: You can log in and explore the v2.0.0 features right here. Try our "Stay-in-the-Groove" login while the music plays!)</i>
+</div>
+
+<br />
+
+<h3>Technical Deep Dive</h3>
+
+<p>Under the hood, we've implemented several advanced patterns to ensure stability and security:</p>
+<ul style="margin-left: 20px;">
+    <li><strong>Secure API Orchestration</strong>: A dedicated <code>api/auth.php</code> layer handles secure session management and authentication, allowing for a decoupled frontend-backend communication pattern.</li>
+    <li><strong>Zero-Interrupt UI Updates</strong>: Using custom JavaScript Pub/Sub patterns, the UI—including the header login state—updates instantly upon authentication without a full DOM refresh.</li>
+    <li><strong>Dark Mode Optimization</strong>: We've implemented native <code>color-scheme</code> support and refined CSS contrast ratios to ensure total legibility during late-night listening sessions.</li>
+    <li><strong>Edge Network Security</strong>: All HTTP streams are securely proxied through our custom Cloudflare Workers edge network, bypassing "Mixed Content" warnings while protecting user privacy.</li>
+</ul>
+
+<br />
+
+<h3>Looking Ahead</h3>
+
+<p>With the PHP/MySQL foundation now firmly in place, we are looking forward to introducing community-driven features, including shared station playlists and expanded metadata enrichment. We remain committed to keeping the core player open-source and community-focused.</p>
+
+<p>Experience the new era of internet radio at <a href="https://radio.djay.ca" target="_blank">radio.djay.ca</a>.</p>
+
+<p>Until next time!</p>
+
+<p><em>— Jason Brain</em></p>
+
+</div>
