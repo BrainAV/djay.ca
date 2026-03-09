@@ -5,8 +5,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="DJ MixKit by DJAY.ca - The most advanced browser-based DJ software. No installation required.">
-    <meta name="keywords" content="DJ MixKit, Browser DJ, Audio Software, Web DJ, DJAY.ca">
+        content="Experience professional-grade DJing in your browser with DJ MixKit. Featuring WebGL visuals, high-fidelity Web Audio API processing, and zero-allocation performance—completely free and offline-capable.">
+    <meta name="keywords" content="DJ MixKit, Browser DJ, Web Audio API, WebGL DJ Mixer, Online DJ Software, DJAY.ca, Jason Brain">
 
     <title>DJ MixKit | DJAY.ca</title>
     <link rel="stylesheet" href="style.css">
@@ -32,87 +32,123 @@
     <main>
         <!-- Hero Section -->
         <section class="hero">
-            <div class="glass-panel shimmer-effect" style="max-width: 900px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px;">
+            <div class="glass-panel shimmer-effect" style="max-width: 1000px; margin: 0 auto; padding: 4rem 2rem; border-radius: 24px;">
                 <h1 class="gradient-text">DJ MixKit</h1>
-                <p>The most advanced browser-based DJ software. No installation required. Fully functional offline.</p>
+                <p>The <strong>DJ MixKit</strong> represents the pinnacle of browser-based audio engineering. A fully functional, professional-grade dual-deck DJ software that requires zero installation, zero plugins, and runs entirely in your modern web browser. Designed for both casual hobbyists and gigging professionals who need a reliable backup or a lightweight performance tool.</p>
                 <div class="hero-cta-container">
-                    <a href="https://mixkit.djay.ca" class="cta-button primary" target="_blank">Launch DJ MixKit (v0.2.0)</a>
-                    <a href="https://github.com/BrainAV/MixKit" class="cta-button secondary" target="_blank">View on GitHub</a>
+                    <a href="https://mixkit.djay.ca" class="cta-button primary" target="_blank">Launch v0.2.0 (Stable)</a>
+                    <a href="https://github.com/BrainAV/MixKit" class="cta-button secondary" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255, 255, 255, 0.05);">
+                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
+                        </svg>
+                        Source Code
+                    </a>
                 </div>
             </div>
         </section>
 
-        <!-- Features Overview -->
-        <section id="features" style="padding-top: 2rem;">
+        <!-- Technical Deep-Dive Section -->
+        <section class="content-section glass-panel" style="margin-top: 2rem; padding: 3rem;">
+            <h2 class="gradient-text">Engineering a Pro Workstation in the Browser</h2>
+            <div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(300px, 1fr)); gap: 2rem; margin-top: 2rem;">
+                <div>
+                    <h3>🚀 The Web Audio Engine</h3>
+                    <p>At the core of DJ MixKit is a custom-built <strong>Web Audio API</strong> orchestration layer. Unlike simple audio players, MixKit treats every track as a dynamic data buffer. This allows for <strong>Real-Time Time-Stretching</strong> and <strong>Pitch-Shifting</strong> without the "chipmunk" effect, giving DJs the ability to beat-match tracks of wildly different tempos with crystal clear fidelity.</p>
+                    <p style="margin-top: 1rem;">Our v0.2.0 release introduces a <strong>Zero-Allocation Rendering Loop</strong>, ensuring that even during heavy modulation or fast crossfading, the audio never stutters. By managing memory manually within JavaScript, we bypass the browser's garbage collector, providing a hardware-like low-latency response time that is critical for live performance.</p>
+                </div>
+                <div>
+                    <h3>🎨 GPU-Accelerated Hardware Visuals</h3>
+                    <p>A DJ needs to see the music to mix it. MixKit utilizes <strong>WebGL 2.0</strong> to render high-definition waveforms that scroll at a buttery-smooth 60 frames per second. Instead of taxing your CPU, we offload the waveform generation to your device's graphics processor.</p>
+                    <p style="margin-top: 1rem;">This architectural choice enables features like <strong>Transient Peak Detection</strong> and <strong>Spectrum Analysis overlays</strong>, allowing you to visually identify kicks, snares, and basslines before you even hear them. It’s a level of visual feedback usually reserved for expensive desktop software like Serato or Rekordbox—now available on any device with a browser.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Overview Grid -->
+        <section id="features" style="padding-top: 4rem;">
+            <h2 class="gradient-text" style="text-align: center; margin-bottom: 2rem;">Professional Performance Tools</h2>
             <div class="feature-grid">
                 <div class="feature-item fade-in delay-1">
-                    <h3>📊 WebGL Visuals</h3>
-                    <p>GPU-accelerated waveforms, spectrum analyzers, and peak-holding VU meters for high-speed, professional visual feedback.</p>
+                    <h3>🎛️ Dual Digital Decks</h3>
+                    <p>Two independent decks with high-precision platter control, stutter-cueing, and momentary pitch bend. Perfect for manual syncing or quick adjustments during a live set.</p>
                 </div>
                 <div class="feature-item fade-in delay-2">
-                    <h3>⚡ Precision Mixing</h3>
-                    <p>Stutter-cueing, momentary pitch bend, and high-precision tempo controls for professional manual beat-matching.</p>
+                    <h3>📊 Waveform Analytics</h3>
+                    <p>Interactive, multi-scale waveforms with color-coded frequency data. See the highs, mids, and lows of your tracks in real-time as they pass the playhead.</p>
                 </div>
                 <div class="feature-item fade-in delay-3">
-                    <h3>🌙 Pro Dark Theme</h3>
-                    <p>High-contrast hardware aesthetic with persistent settings that save to your browser for every session.</p>
+                    <h3>⚡ 3-Band Pro EQ</h3>
+                    <p>Studio-grade equalization with full kill capability. Isolate the kick or smooth out the vocals with our mathematically modeled 3-band frequency separators.</p>
                 </div>
                 <div class="feature-item fade-in delay-4">
-                    <h3>🌐 Zero Installation</h3>
-                    <p>Runs entirely in your browser without plugins. Fully functional offline and optimized for zero-allocation performance.</p>
+                    <h3>💾 Persistent Sessions</h3>
+                    <p>Your library and settings shouldn't disappear when you close your tab. MixKit uses internal storage to remember your gain levels, EQ settings, and visualizer preferences.</p>
                 </div>
             </div>
         </section>
 
-        <!-- Instructions Section (Migrated from Index) -->
+        <!-- Use Cases & Tutorial -->
         <section id="instructions" style="margin-top: 4rem;">
-            <h2 class="gradient-text">Getting Started</h2>
+            <h2 class="gradient-text">Getting Started: Your First Mix</h2>
             <div class="instructions-grid">
                 <div class="instruction-item">
                     <div class="instruction-number">1</div>
-                    <h3>Load Your Music</h3>
-                    <p>Drag and drop your audio files onto a deck, or use the browse button to select tracks from your device.</p>
+                    <h3>Drag & Drop Library</h3>
+                    <p>Simply drag your <strong>MP3, WAV, or OGG</strong> files directly onto the digital platters. MixKit loads them into memory instantly for zero-latency seeking.</p>
                 </div>
                 <div class="instruction-item">
                     <div class="instruction-number">2</div>
-                    <h3>Mix and Play</h3>
-                    <p>Use the intuitive controls to mix, sync, and manipulate your tracks like a professional DJ.</p>
+                    <h3>Tempo & Key Control</h3>
+                    <p>Adjust the <strong>Pitch Slider</strong> to match beats. Use the <strong>Key Lock</strong> feature to shift the tempo without changing the musical key of the vocalists.</p>
                 </div>
                 <div class="instruction-item">
                     <div class="instruction-number">3</div>
-                    <h3>Create Your Sound</h3>
-                    <p>Add effects, adjust tempo, and use the crossfader to create seamless transitions between tracks.</p>
+                    <h3>The Perfect Blend</h3>
+                    <p>Use the <strong>Crossfader</strong> and <strong>Line Faders</strong> to blend the two sources. Monitor your levels on the peak-holding VU meters to prevent digital clipping.</p>
                 </div>
                 <div class="instruction-item">
                     <div class="instruction-number">4</div>
-                    <h3>Save Your Session</h3>
-                    <p>Export your mix and settings to continue later. Your creative flow never has to stop.</p>
+                    <h3>Gig-Ready Offline Mode</h3>
+                    <p>Worried about the venue's Wi-Fi? MixKit is built for offline use. Once the page is loaded, you can safely disconnect and mix your local files all night.</p>
                 </div>
             </div>
         </section>
 
-        <!-- FAQ Section (Migrated) -->
-        <section id="faq" class="faq-section">
-            <h2 class="gradient-text">DJ MixKit FAQ</h2>
+        <!-- History Section -->
+        <section class="content-section glass-panel shimmer-effect" style="margin-top: 4rem; padding: 3rem;">
+            <h2 class="gradient-text">Born from 30 Years of Experience</h2>
+            <p>DJ MixKit was created by <strong>Jason Brain</strong>, a veteran Canadian DJ with three decades of experience in the booths of nightclubs and massive event halls. The goal was simple: to build the software he wished he had when starting—tools that are accessible to anyone, anywhere, without barriers like expensive subscriptions or installation headaches.</p>
+            <p style="margin-top: 1rem;">This project is a labor of love that combines deep musical intuition with modern programming paradigms. We believe that the web has finally reached a point where it can handle high-end audio production, and MixKit is the proof.</p>
+            
+            <!-- Legacy Resources Box -->
+            <div class="glass-panel" style="margin-top: 2rem; padding: 1.5rem; background: rgba(255, 255, 255, 0.03); border: 1px solid rgba(255, 255, 255, 0.05); font-size: 0.9rem;">
+                <h4 style="margin-bottom: 0.5rem; color: #4ecdc4; text-transform: uppercase; letter-spacing: 1px;">📀 Open Source & Community</h4>
+                <p style="margin-bottom: 1rem; opacity: 0.8;">The raw engine and UI of MixKit are open for exploration. Contribute to the project or host your own version via GitHub.</p>
+                <div style="display: flex; gap: 15px; flex-wrap: wrap;">
+                    <a href="https://github.com/BrainAV/MixKit" target="_blank" style="color: #fff; text-decoration: none; border-bottom: 1px solid #4ecdc4;">View Source Code (GitHub)</a>
+                    <a href="https://mixkit.djay.ca" target="_blank" style="color: #fff; text-decoration: none; border-bottom: 1px solid #4ecdc4;">Launch Stable App</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- FAQ Section -->
+        <section id="faq" class="faq-section" style="margin-top: 4rem;">
+            <h2 class="gradient-text">Frequently Asked Questions</h2>
             <div class="faq-item">
-                <h3>What is DJ MixKit?</h3>
-                <p>DJ MixKit is a browser-based DJ software that allows users to mix tracks without any installation. It offers advanced features for professional DJs and is accessible from any modern device.</p>
+                <h3>Is DJ MixKit free to use?</h3>
+                <p>Yes. DJ MixKit is a free-to-use professional tool. Our mission is to keep high-quality audio software accessible to everyone in the creative community.</p>
             </div>
             <div class="faq-item">
-                <h3>Do I need to download anything to use DJ MixKit?</h3>
-                <p>No, DJ MixKit runs entirely in your browser. There is no need for downloads or installations, making it incredibly fast and safe to use.</p>
+                <h3>Will it work on my phone?</h3>
+                <p>Yes. MixKit is fully responsive and works on mobile browsers. However, due to the complexity of the dual-deck interface, we recommend a tablet or desktop for the best mixing experience.</p>
             </div>
             <div class="faq-item">
-                <h3>Can I use DJ MixKit offline?</h3>
-                <p>Yes, DJ MixKit can be used offline once it is loaded in your browser or if you save the HTML files locally. The Web Audio API handles all playback natively.</p>
+                <h3>Are my tracks uploaded to your server?</h3>
+                <p>No. For privacy and speed, all processing happens <strong>locally on your device</strong> via the Web Audio API. Your tracks never leave your computer—they are loaded into memory and processed in real-time by your browser.</p>
             </div>
             <div class="faq-item">
-                <h3>What types of audio files are supported?</h3>
-                <p>DJ MixKit supports standard web audio formats including MP3, WAV, and OGG. Simply drag and drop your files directly onto the digital decks.</p>
-            </div>
-            <div class="faq-item">
-                <h3>Is there a mobile version of DJ MixKit?</h3>
-                <p>Yes, DJ MixKit features a responsive design that adapts to tablet and mobile layouts, although a larger screen is recommended for the best dual-deck mixing experience.</p>
+                <h3>Can I connect a hardware MIDI controller?</h3>
+                <p>Advanced MIDI mapping is currently a top priority in our Long-Term Roadmap. We aim to support universal controller discovery by Late 2026.</p>
             </div>
         </section>
 
