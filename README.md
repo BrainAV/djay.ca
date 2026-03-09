@@ -9,12 +9,12 @@ Welcome to DJAY.ca - where we build creative and accessible audio tools for musi
 
 ## 🚀 Featured Products
 
-### 📻 **[Radio Stream Player](https://radio.djay.ca)**
+### 📻 **[Radio Stream Player](https://radio.djay.ca)** ([Repo](https://github.com/BrainAV/Radio-Stream-Player-PHP))
 *A beautiful, highly customizable internet radio portal. Listen to curated global streams or add your own ad-free.*
-- **Custom Stations:** Add your own HTTP/HTTPS stream URLs.
-- **Live Metadata Integration:** Real-time track and artist info synced to your OS lock screen.
+- **Custom Stations:** Add your own HTTP/HTTPS stream URLs via the Radio Browser API.
+- **User Accounts:** Save your favorites and settings across devices with the new PHP/MySQL backend.
 - **Web Audio Visualizers:** Beautiful, hardware-accelerated audio visualization canvas.
-- **Secure Edge Proxy:** Natively bypass restrictive browser "Mixed Content" warnings.
+- **Secure Edge Proxy:** Natively bypass restrictive browser "Mixed Content" warnings via Cloudflare.
 
 ### 🎛️ **[DJ MixKit](https://mixkit.djay.ca)**
 *The most advanced browser-based DJ software. No installation required. Fully functional offline.*
