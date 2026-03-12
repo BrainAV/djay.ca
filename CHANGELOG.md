@@ -7,6 +7,17 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.2.0] - 2026-03-12
+### Added
+- **`event-planner.html`**: New dedicated product page for **DJ & Event Planner Pro**, replacing the old waitlist page. Includes feature overview, development status/timeline, and cross-links to live products. No waitlist form — focuses on honest "coming in late 2026" messaging.
+- **Canonical Tags**: Added `<link rel="canonical">` to all 10 `djay.ca` HTML pages to resolve "Duplicate without user-selected canonical" warnings in Google Search Console.
+- **`gsc-manager` Agent Skill**: New skill documenting the GSC workflow for the DJAY.ca ecosystem — sitemap management, canonical strategy, common error fixes, and indexing checklists.
+
+### Changed
+- **`sitemap.xml`**: Major update — added `radio-player.html` and `mixkit.html` (previously missing), added `event-planner.html`, removed retired `waitlist.html`, refreshed all `<lastmod>` dates to `2026-03-12`, and corrected priority values to reflect page importance.
+- **`includes/header.html`**: Removed "Join Waitlist" navigation link.
+- **`index.html`**: Updated the "DJ & Event Planner Pro" teaser card CTA from "Join Waitlist" → "Learn More" linking to new `event-planner.html`.
+
 ## [1.1.0] - 2026-03-12
 ### Added
 - Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.0**.
