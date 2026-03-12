@@ -6,7 +6,7 @@ This document outlines the strategic vision and future additions for the DJAY.ca
 
 ## 🎯 Short-Term Goals
 
-- [x] **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently v1.4.0).
+- [x] **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently **v2.2.0**).
 - [ ] **DJ MixKit Development:** Prepare for upcoming development sessions focused on launching and improving the DJ MixKit web application.
 - **AdSense Approval Preparation (Content & Quality Audit):**
   - [x] **Blog Integration:** Embed the latest posts from `blog.djay.ca` onto the landing page to provide fresh, text-rich content.
@@ -25,8 +25,11 @@ This document outlines the strategic vision and future additions for the DJAY.ca
 - **Persistent Audio Experience (Bridge to PHP Player):**
   - Implement a mechanism (e.g., SPA framework like Turbo/Pjax, or a persistent master iframe) to prevent audio from stopping when a user navigates between the DJAY.ca hub and the embedded radio experience.
   - Ensure the "current station" state survives page transitions.
-- **Monetization Pipeline:**
-  - Introduce visually cohesive placeholder ads on the page, paving the way for full Google AdSense integration.
+- **Monetization Pipeline (Active):**
+  - [x] Google AdSense approved and live on `djay.ca`.
+  - [x] Auto Ads enabled site-wide by Google.
+  - [x] Manual responsive display ad spots added to `index.html` and `radio-player.html`.
+  - [ ] **Premium User Tier:** Build out a payment structure (Stripe or similar) to offer a premium, ad-free subscription tier. Currently admins can manually grant premium status via the Admin Dashboard — formal self-serve payments are a long-term goal.
 
 ---
 

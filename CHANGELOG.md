@@ -6,7 +6,17 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+
+## [1.1.0] - 2026-03-12
 ### Added
+- Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.0**.
+- Added responsive AdSense display ad spots to `index.html` (between hero and products) and `radio-player.html` (between hero and deep-dive content).
+- Added a **"What's New in v2.2.0"** feature section to `radio-player.html` detailing the monetization engine, premium user tier, pop-out player overhaul, and Admin Site Config tab.
+- Added a **💎 Premium Accounts** feature card to the RSP feature grid on `index.html`.
+- Added `.ad-banner-wrapper` CSS utility class to `style.css` for consistent, mobile-safe ad slot styling.
+- Updated `ROADMAP.md` to reflect AdSense launch as complete and document the long-term premium subscription goal.
+
+### Added (previously Unreleased)
 - Expanded the `radio-player.html` product page with 600+ words of substantive content detailing the v2.0.0 architecture, history, and technical stack (PHP/MySQL/Cloudflare).
 - Overhauled `mixkit.html` with 600+ words of "Gold Standard" content, including technical deep-dives into the **Web Audio Engine** and **WebGL Visuals**, and a "Born from 30 Years Experience" history section.
 - Redesigned the `#products` section on `index.html` with a premium CTA button layout, including direct "Source Code" links with GitHub icons and polished project descriptions.
@@ -14,7 +24,7 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 - Added a legal disclaimer link to **Algoriddim GmbH** in `includes/footer.html` for clarity and compliance.
 - Injected high-impact "Source" buttons in the hero sections of `mixkit.html` and `index.html` featuring branded SVG icons and glass-morphism backgrounds.
 
-### Changed
+### Changed (previously Unreleased)
 - Sanitized the entire `mixkit.html` and `index.html` pages by converting all Markdown-style formatting (`**`, `[]()`) into semantic HTML (`<strong>`, `<a>`, `<code>`).
 - Updated SEO metadata (description and keywords) on `mixkit.html` to attract more professional users and improve AdSense compliance.
 - Refined the primary homepage feature highlights to sync with the new narrative depth of the standalone product pages.

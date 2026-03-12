@@ -1769,3 +1769,23 @@ footer a:hover {
     }
 }
 
+/* =====================================================
+   AD SPOTS — AdSense Display Units
+   ===================================================== */
+
+.ad-banner-wrapper {
+    text-align: center;
+    margin: 2.5rem auto;
+    max-width: 100%;
+    padding: 0.5rem 1rem;
+    opacity: 0.95;
+    overflow: hidden;
+}
+
+@media (max-width: 480px) {
+    .ad-banner-wrapper {
+        padding: 0.25rem 0;
+        margin: 1.5rem auto;
+    }
+}
+
