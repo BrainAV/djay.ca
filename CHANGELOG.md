@@ -7,6 +7,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.3.0] - 2026-03-13
+### Changed
+- Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.2**.
+- Overhauled the **"What's New"** section on `radio-player.html` to showcase v2.2.2 features: Advanced Bitrate Sniffing, Stream Resiliency, and Music-First Priority.
+- Updated `ROADMAP.md` to reflect the latest RSP version.
+
 ## [1.2.0] - 2026-03-12
 ### Added
 - **`event-planner.html`**: New dedicated product page for **DJ & Event Planner Pro**, replacing the old waitlist page. Includes feature overview, development status/timeline, and cross-links to live products. No waitlist form — focuses on honest "coming in late 2026" messaging.
