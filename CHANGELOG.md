@@ -11,7 +11,11 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
 - Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.2**.
 - Overhauled the **"What's New"** section on `radio-player.html` to showcase v2.2.2 features: Advanced Bitrate Sniffing, Stream Resiliency, and Music-First Priority.
+- Added a **"Recent Evolution (v2.1 - v2.2)"** timeline to `radio-player.html` to capture the project's growth journey from the "PHP Awakening" to its current pro-grade state.
 - Updated `ROADMAP.md` to reflect the latest RSP version.
+
+### Added
+- **`blog/v2_2_2_release_sync.html`**: New professional blog post summarizing the evolution from v2.0.0 to v2.2.2, now available for the DJAY.ca Blogger site.
 
 ## [1.2.0] - 2026-03-12
 ### Added

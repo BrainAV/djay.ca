@@ -1,0 +1,54 @@
+<!-- 
+SEARCH DESCRIPTION: Explore the massive evolution of the DJAY.ca Radio Stream Player from v2.0 to v2.2.2, featuring bitrate sniffing, stream resiliency, and a new monetization engine.
+LABELS: Radio Stream Player, Internet Radio, Web Audio API, PHP, MySQL, Web Development, Release Notes
+-->
+
+<div dir="ltr" style="text-align: left;" trbidi="on">
+
+<h2 style="text-align: left;">From Awakening to Acceleration: The Road to Radio Stream Player v2.2.2</h2>
+
+<p>It’s been an incredible journey since we announced the "PHP Awakening" with version 2.0.0. What started as a transition to a full-stack architecture has rapidly evolved into a professional-grade audio platform. Today, we’re recapping the major milestones that brought us to our most resilient version yet: <strong>v2.2.2</strong>.</p>
+
+<p>Since the launch of the account system, we haven't stopped listening to your feedback. From account sovereignty to industrial-strength stream resiliency, here’s a look at the evolution of your favorite internet radio portal.</p>
+
+<br />
+
+<h3>Major Highlights / Updates</h3>
+
+<p>The journey from v2.1 to v2.2.2 has been defined by three core pillars: <strong>User Power</strong>, <strong>Monetization</strong>, and <strong>Reliability</strong>.</p>
+<ul style="margin-left: 20px;">
+    <li><strong>v2.1: Account Sovereignty</strong>: We introduced a complete AJAX-powered registration flow and secure password recovery, giving you full control over your listening profile.</li>
+    <li><strong>v2.2.0: The Pro Overhaul</strong>: A massive update that introduced our role-aware monetization engine and transformed the pop-out player into a "first-class" experience with auto-start and background wallpaper sync.</li>
+    <li><strong>v2.2.1: UX Refinement</strong>: We polished the interface, integrated ads natively into the player card for a cleaner look, and added dynamic browser tab titles so you always know what's playing at a glance.</li>
+    <li><strong>v2.2.2: The Bitrate & Resiliency Update</strong>: Our latest release adds advanced bitrate sniffing and an exponential backoff reconnection system, ensuring your stream stays alive and transparent.</li>
+</ul>
+
+<div style="text-align: center; margin: 20px 0;">
+    <i>(The evolution of the Radio Stream Player glassmorphism interface)</i>
+</div>
+
+<br />
+
+<h3>Technical Deep Dive</h3>
+
+<p>Under the hood, we've solved some of the most complex challenges of browser-based audio delivery:</p>
+<ul style="margin-left: 20px;">
+    <li><strong>Advanced Bitrate Sniffing</strong>: We now intelligently extract bitrate data directly from HTTP headers (like ICY-BR) when real-time metadata is missing, providing total audio transparency.</li>
+    <li><strong>Exponential Backoff Reconnection</strong>: To combat server-side drops, the player now scales its reconnection attempts over 10 seconds, drastically improving stability on unreliable networks.</li>
+    <li><strong>Music-First Priority</strong>: We've optimized the boot sequence to defer non-essential polling until <em>after</em> the audio buffer is stabilized, resulting in noticeably faster stream starts.</li>
+    <li><strong>Balanced VU Visuals</strong>: Our hardware-accelerated VU meters now automatically mirror active channels for mono streams, maintaining a beautiful aesthetic regardless of the source format.</li>
+</ul>
+
+<br />
+
+<h3>Looking Ahead</h3>
+
+<p>With the platform now stable and monetized, we are looking toward <strong>v2.3</strong>. Our goal is "Backend Independence," where we move our metadata and stream proxies from Cloudflare Workers to native PHP, creating a 100% self-hosted, sovereign audio experience.</p>
+
+<p>Try out the latest updates at <a href="https://radio.djay.ca" target="_blank">radio.djay.ca</a>.</p>
+
+<p>Until next time, keep the music playing!</p>
+
+<p><em>— Jason Brain</em></p>
+
+</div>
