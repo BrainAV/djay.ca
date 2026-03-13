@@ -7,6 +7,13 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.4.0] - 2026-03-13
+### Changed
+- Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.3**.
+- Overhauled the **"What's New"** section on `radio-player.html` to showcase v2.2.3 features: Responsive Admin Dashboard, State Recovery, Declutter Mode, and Visual Polish.
+- Added **v2.2.2** to the evolution timeline on `radio-player.html`.
+- Updated `ROADMAP.md` to reflect the latest RSP version.
+
 ## [1.3.0] - 2026-03-13
 ### Changed
 - Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.2**.

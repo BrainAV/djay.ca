@@ -6,7 +6,7 @@ This document outlines the strategic vision and future additions for the DJAY.ca
 
 ## 🎯 Short-Term Goals
 
-- [x] **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently **v2.2.2**).
+- [x] **Promote Radio Stream Player:** Keep the Radio Stream Player positioned as the crown jewel of the landing page. It's our most mature and recently updated project (currently **v2.2.3**).
 - [ ] **DJ MixKit Development:** Prepare for upcoming development sessions focused on launching and improving the DJ MixKit web application.
 - **AdSense Approval Preparation (Content & Quality Audit):**
   - [x] **Blog Integration:** Embed the latest posts from `blog.djay.ca` onto the landing page to provide fresh, text-rich content.
