@@ -5,9 +5,45 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description"
-        content="DJAY.ca is a premier destination for global internet radio and professional browser-based audio tools like DJ MixKit.">
+        content="DJAY.ca is the premiere hub for professional browser-based audio software. Discover the Radio Stream Player v2.2.3 and DJ MixKit v0.2.0 – built for musicians, DJs, and listeners.">
     <meta name="keywords"
-        content="DJAY.ca, Internet Radio, Live Streaming, Radio Player, Browser DJ, Audio Software, Web Apps, Music Production, DJ MixKit, Event Planning">
+        content="DJAY.ca, Internet Radio Player, Browser DJ Software, Web Audio API, Global Radio Streams, Music Production Tools, Jason Brain, Brain AV, Online DJ Mixer, Radio Browser API">
+    <link rel="canonical" href="https://djay.ca/">
+    
+    <!-- Open Graph / Facebook -->
+    <meta property="og:type" content="website">
+    <meta property="og:url" content="https://djay.ca/">
+    <meta property="og:title" content="DJAY.ca | Innovative Browser-Based Audio Software">
+    <meta property="og:description" content="The ultimate destination for global internet radio and professional DJ tools. No installation required.">
+    <meta property="og:image" content="assets/img/hero-visual.png">
+
+    <!-- Twitter -->
+    <meta property="twitter:card" content="summary_large_image">
+    <meta property="twitter:url" content="https://djay.ca/">
+    <meta property="twitter:title" content="DJAY.ca | Innovative Browser-Based Audio Software">
+    <meta property="twitter:description" content="The ultimate destination for global internet radio and professional DJ tools. No installation required.">
+    <meta property="twitter:image" content="assets/img/hero-visual.png">
+
+    <!-- JSON-LD Structured Data -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Organization",
+      "name": "DJAY.ca",
+      "url": "https://djay.ca",
+      "logo": "https://djay.ca/assets/img/hero-visual.png",
+      "sameAs": [
+        "https://github.com/BrainAV",
+        "https://blog.djay.ca"
+      ],
+      "founder": {
+        "@type": "Person",
+        "name": "Jason Brain"
+      },
+      "description": "Makers of innovative audio software for the web."
+    }
+    </script>
+
     <!-- Google tag (gtag.js) -->
     <script async src="https://www.googletagmanager.com/gtag/js?id=G-T93274MPPZ"></script>
     <script>
@@ -34,10 +70,12 @@
 
     <main>
         <section class="hero">
+            <div class="hero-visual">
+                <img src="assets/img/hero-visual.png" alt="Advanced Audio Visualization" class="hero-image">
+            </div>
             <div class="hero-text">
-                <h1 class="gradient-text-alt">Welcome to DJAY.ca</h1>
-                <p>Your premier destination for internet radio and innovative audio tools. Discover global music streams
-                    or create your own with our browser-based DJ software.</p>
+                <h1 class="gradient-text-alt">Audio Innovation, <br>Refined in the Browser</h1>
+                <p>Welcome to <strong>DJAY.ca</strong> – the premier hub for high-performance audio tools and global internet radio. Experience the future of music production and discovery with zero installation.</p>
                 <div class="hero-cta-container">
                     <a href="https://radio.djay.ca" class="cta-button primary" target="_blank">📻 Listen to Live Radio</a>
                     <a href="#products" class="cta-button secondary">🎛️ Explore Pro Tools</a>
@@ -57,45 +95,46 @@
         </div>
 
         <section id="products">
-            <h2 class="gradient-text">Featured Products</h2>
+            <h2 class="gradient-text">Flagship Audio Solutions</h2>
 
             <!-- Radio Stream Player Section -->
             <div class="product-hero primary-product glass-panel shimmer-effect" style="border-radius: 24px;">
+                <div class="version-tag">STABLE v2.2.3</div>
                 <h2 class="product-title gradient-text">Radio Stream Player</h2>
-                <p class="product-subtitle">The premier internet radio portal for music lovers who value quality, aesthetics, and privacy. Experience a seamless full-stack audio solution.</p>
+                <p class="product-subtitle">The bridge between old-school radio discovery and modern full-stack performance. A beautiful, high-fidelity internet radio hub powered by an advanced PHP backend.</p>
 
                 <div class="hero-cta-container">
                     <a href="radio-player.html" class="cta-button secondary" style="min-width: 180px;">Project Details</a>
-                    <a href="https://radio.djay.ca" class="cta-button primary" target="_blank" style="min-width: 180px;">Launch v2.2.3</a>
+                    <a href="https://radio.djay.ca" class="cta-button primary" target="_blank" style="min-width: 180px;">Launch Player</a>
                     <a href="https://github.com/BrainAV/Radio-Stream-Player-PHP" class="cta-button secondary" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255, 255, 255, 0.05); min-width: 180px;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
-                        Source
+                        Source Code
                     </a>
                 </div>
             </div>
 
             <div class="feature-grid spaced-bottom">
                 <div class="feature-item fade-in delay-1">
-                    <h3>📻 Global Stations</h3>
-                    <p>New integrated <strong>Radio Browser</strong> API gives you access to over 30,000 stations. Sync your favorites to your personal account.</p>
+                    <div class="feature-icon">🌐</div>
+                    <h3>Global Discoverability</h3>
+                    <p>Access over 30,000 radio stations worldwide via the Radio Browser API, curated and organized for instant listening.</p>
                 </div>
                 <div class="feature-item fade-in delay-2">
-                    <h3>🔐 Seamless Accounts</h3>
-                    <p>Powered by our new <strong>PHP & MySQL backend</strong>. Log in via AJAX without stopping the music to save your settings and custom library.</p>
+                    <div class="feature-icon">👤</div>
+                    <h3>Persistent Accounts</h3>
+                    <p>Save favorites and custom stations across sessions with our PHP/MySQL backend. Your music library, secured.</p>
                 </div>
                 <div class="feature-item fade-in delay-3">
-                    <h3>📊 Dynamic Visualizers</h3>
-                    <p>Premium glassmorphism UI with hardware-accelerated audio visualization and multiple distinct VU meter styles.</p>
+                    <div class="feature-icon">✨</div>
+                    <h3>Visual Excellence</h3>
+                    <p>Hardware-accelerated Web Audio visualizers and multiple VU meter styles provide a premium sensory experience.</p>
                 </div>
                 <div class="feature-item fade-in delay-4">
-                    <h3>🛡️ Secure Proxying</h3>
-                    <p>Natively bypasses browser "Mixed Content" warnings via our custom Cloudflare edge network proxy for all HTTP streams.</p>
-                </div>
-                <div class="feature-item fade-in delay-5">
-                    <h3>💎 Premium Accounts</h3>
-                    <p>Admins can grant <strong>premium status</strong> per user for a fully <strong>ad-free listening experience</strong> — suppressed instantly after login, no page refresh needed.</p>
+                    <div class="feature-icon">🔒</div>
+                    <h3>Secure Edge Proxy</h3>
+                    <p>Our custom Cloudflare Edge infrastructure ensures all HTTP streams work seamlessly across modern HTTPS environments.</p>
                 </div>
             </div>
 
@@ -103,40 +142,46 @@
 
             <!-- DJ MixKit Section -->
             <div class="product-hero glass-panel shimmer-effect" style="border-radius: 24px;">
+                <div class="version-tag" style="background: var(--gradient-primary);">BETA v0.2.0</div>
                 <h2 class="product-title gradient-text">DJ MixKit</h2>
-                <p class="product-subtitle">Professional browser-based DJ software. No installation, low-latency Web Audio engine, and GPU-accelerated visuals.</p>
+                <p class="product-subtitle">Professional mixing capabilities, directly in your browser. Low-latency engine, GPU visuals, and zero installation required.</p>
 
                 <div class="hero-cta-container">
                     <a href="mixkit.html" class="cta-button secondary" style="min-width: 180px;">Project Details</a>
-                    <a href="https://mixkit.djay.ca" class="cta-button primary" target="_blank" style="min-width: 180px;">Launch v0.2.0</a>
+                    <a href="https://mixkit.djay.ca" class="cta-button primary" target="_blank" style="min-width: 180px;">Launch MixKit</a>
                     <a href="https://github.com/BrainAV/MixKit" class="cta-button secondary" target="_blank" style="display: flex; align-items: center; justify-content: center; gap: 10px; background: rgba(255, 255, 255, 0.05); min-width: 180px;">
-                        <svg width="20" height="20" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
                             <path d="M12 0c-6.626 0-12 5.373-12 12 0 5.302 3.438 9.8 8.207 11.387.599.111.793-.261.793-.577v-2.234c-3.338.726-4.041-1.416-4.041-1.416-.546-1.387-1.333-1.756-1.333-1.756-1.089-.745.083-.729.083-.729 1.205.084 1.839 1.237 1.839 1.237 1.07 1.834 2.807 1.304 3.492.997.107-.775.418-1.305.762-1.604-2.665-.305-5.467-1.334-5.467-5.931 0-1.311.469-2.381 1.236-3.221-.124-.303-.535-1.524.117-3.176 0 0 1.008-.322 3.301 1.23.957-.266 1.983-.399 3.003-.404 1.02.005 2.047.138 3.006.404 2.291-1.552 3.297-1.23 3.297-1.23.653 1.653.242 2.874.118 3.176.77.84 1.235 1.911 1.235 3.221 0 4.609-2.807 5.624-5.479 5.921.43.372.823 1.102.823 2.222v3.293c0 .319.192.694.801.576 4.765-1.589 8.199-6.086 8.199-11.386 0-6.627-5.373-12-12-12z"/>
                         </svg>
-                        Source
+                        Source Code
                     </a>
                 </div>
             </div>
 
             <div class="feature-grid">
                 <div class="feature-item fade-in delay-1">
-                    <h3>🎛️ Dual Decks</h3>
+                    <div class="feature-icon">🎛️</div>
+                    <h3>Dual-Deck Console</h3>
                     <p>Two independent decks with professional-grade controls for seamless track mixing and live performance.</p>
                 </div>
                 <div class="feature-item fade-in delay-2">
-                    <h3>⚡ Advanced Controls</h3>
-                    <p>Tempo control, sync, key lock, pitch bend, and more. All the tools professionals need.</p>
+                    <div class="feature-icon">⚡</div>
+                    <h3>Low-Latency Engine</h3>
+                    <p>Optimized Web Audio API integration ensures precise response times for cues, pitch bends, and effects.</p>
                 </div>
                 <div class="feature-item fade-in delay-3">
-                    <h3>🎚️ Effects & Visuals</h3>
-                    <p>Professional crossfader, 3-band EQ, and GPU-accelerated WebGL visuals to shape your unique sound.</p>
+                    <div class="feature-icon">📊</div>
+                    <h3>GPU Acceleration</h3>
+                    <p>Real-time WebGL spectral visuals and waveform displays that react with pin-point accuracy to your sound.</p>
                 </div>
                 <div class="feature-item fade-in delay-4">
-                    <h3>🌐 No Installation</h3>
-                    <p>Runs entirely in your browser. No downloads or setup required. Deep integration with our <strong>GitHub Repository</strong> for technical users.</p>
+                    <div class="feature-icon">📦</div>
+                    <h3>Zero Installation</h3>
+                    <p>Cloud-native audio software that works wherever you are. No drivers, no downloads, just performance.</p>
                 </div>
             </div>
         </section>
+
 
         <!-- Coming Soon Teaser Section -->
         <section class="coming-soon-wrapper">

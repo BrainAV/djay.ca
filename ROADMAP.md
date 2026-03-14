@@ -13,6 +13,7 @@ This document outlines the strategic vision and future additions for the DJAY.ca
   - [ ] **Blogger Template Sync:** Review and completely overhaul the theme on `blog.djay.ca` so the UI is nearly identical to the main `djay.ca` site, ensuring a seamless user experience.
   - [x] **Dedicated Product Pages:** Create standalone pages for the Radio Stream Player and DJ MixKit (`/radio-player.html`, `/mixkit.html`) with 500-800 words detailing their history, technical stack (Cloudflare routing, Web Audio API), tutorials, and use-cases to eliminate "thin content" risks.
   - [x] **FAQ Expansion:** Expand the `faq.html` page to include robust, multi-paragraph answers to increase organic word count and keyword density.
+  - [x] **Home Page SEO & Visual Audit:** Overhauled meta tags, added structured data, and updated hero visuals for a premium, high-ranking landing page.
   - [x] **Mobile Layout Audit:** Conduct a strict mobile-first audit ensuring zero overlapping elements, no horizontal scrolling, and perfect legibility to meet AdSense mobile review standards.
 
 ---

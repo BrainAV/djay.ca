@@ -7,6 +7,15 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 
 ## [Unreleased]
 
+## [1.5.0] - 2026-03-14
+### Changed
+- **Homepage SEO Overhaul**: Optimized `index.html` with enhanced metadata, Open Graph tags, Twitter Cards, and JSON-LD structured data for better search visibility.
+- **Visual Polish**: Deepened the "Glassmorphism" aesthetic in `style.css` with improved backdrop filters, refined gradients, and hardware-accelerated animations.
+- **Hero Redesign**: Implemented a new two-column hero layout with a futuristic browser-audio visualization asset.
+- **Product Highlights**: Rebuilt the flagship product cards on the homepage with clear versioning (Radio Stream Player v2.2.3, DJ MixKit v0.2.0) and descriptive feature icons.
+- **Technical Cleanup**: Consolidated CSS variables, fixed broken animation blocks, and resolved several linting issues in `style.css`.
+- Added a global **Canonical Tag** to the homepage.
+
 ## [1.4.0] - 2026-03-13
 ### Changed
 - Updated Radio Stream Player version references across `index.html` and `radio-player.html` to **v2.2.3**.
