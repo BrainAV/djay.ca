@@ -356,8 +356,8 @@ main {
         align-items: center;
     }
 
-    .hero-cta-container {
-        justify-content: flex-start !important;
+    .hero .hero-cta-container {
+        justify-content: flex-start;
     }
 }
 
