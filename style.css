@@ -304,6 +304,7 @@ nav ul li a.active::after {
     justify-content: center;
     flex-wrap: wrap;
     margin-top: 25px;
+    width: 100%;
 }
 
 .cta-button.primary {
@@ -653,6 +654,10 @@ main {
 .product-hero {
     padding: 4rem 2rem;
     margin: 3rem 0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
 }
 
 .product-hero.primary-product {
@@ -669,6 +674,9 @@ main {
     font-size: 1.3rem;
     margin-bottom: 2rem;
     opacity: 0.8;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 .version-badges {
