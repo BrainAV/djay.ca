@@ -6,6 +6,10 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased]
+### Added
+- **`blog/v2_2_8_admin_intelligence.html`**: New professional blog post summarizing the evolution from v2.2.3 to v2.2.8, featuring PWA support, admin intelligence, and seamless favorites migration.
+- **Radio Stream Player v2.2.10 Support**: Updated `index.html` and `radio-player.html` to reflect the latest release, including **Clean URLs**, **Mobile Navigation fixes**, and **PWA optimizations**.
+- **Evolution Timeline**: Expanded the "Journey of Innovation" on `radio-player.html` with milestones from **v2.2.4** through **v2.2.10**.
 
 ## [1.5.0] - 2026-03-14
 ### Changed
