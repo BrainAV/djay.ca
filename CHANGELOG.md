@@ -5,12 +5,15 @@ All notable changes to the DJAY.ca landing page and ecosystem will be documented
 The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/),
 and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0.html).
 
-## [Unreleased]
+## [1.6.0] - 2026-03-20
 ### Added
-- **`blog/v2_2_8_admin_intelligence.html`**: New professional blog post summarizing the evolution from v2.2.3 to v2.2.8, featuring PWA support, admin intelligence, and seamless favorites migration.
-- **Radio Stream Player v2.2.10 Support**: Updated `index.html` and `radio-player.html` to reflect the latest release, including **Clean URLs**, **Mobile Navigation fixes**, and **PWA optimizations**.
-- **Evolution Timeline**: Expanded the "Journey of Innovation" on `radio-player.html` with milestones from **v2.2.4** through **v2.2.10**.
-- **Comprehensive Feature Ecosystem**: Rebuilt the `radio-player.html` feature highlights into a 16-item grid covering both legacy v1 core features and v2.x modern architectural milestones.
+- **`blog/v2_2_13_immersion_and_branding.html`**: New professional blog post summarizing the journey from v2.2.9 to v2.2.13, featuring immersive fullscreen modes and audio-reactive branding.
+- **Radio Stream Player v2.2.13 Support**: Updated `index.html` and `radio-player.html` to reflect the latest release.
+- **Visual Evolution Timeline**: Expanded `radio-player.html` with milestones for **v2.2.11 (Audio Reactivity)** and **v2.2.13 (Absolute Immersion)**.
+
+### Changed
+- **`blog/v2_2_8_admin_intelligence.html`**: (Previously Unreleased) New professional blog post summarizing the evolution from v2.2.3 to v2.2.8.
+- **Radio Player "What's New"**: Refreshed the architectural milestones on `radio-player.html` to highlight the latest v2.2.13 features.
 
 ## [1.5.0] - 2026-03-14
 ### Changed
